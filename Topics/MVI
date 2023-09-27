@@ -1,0 +1,30 @@
+
+(MVI) Model View Intent
+
+Model   - represents the state of UI. For example UI may have different states like loading, loaded, errors, 
+
+
+View    - In MVI, view is interfaces which is implemented in Activity or Fragment.
+        It means to have container which can accept the different model states and display it as a UI.
+
+Event, Result, State, Effect
+
+Event	- Any User's Event
+Result	- Response from API, DB 
+State	- Data Model Class
+Effect	- UI Changes
+
+
+2(DRS)PL
+	DerivedStateOf
+	DisposableEffect
+	LaunchedEffect
+	produceState
+	rememberCoroutineScope
+	rememberUpdatedState
+	SideEffect
+	snapshotFlow
+
+	
+
+

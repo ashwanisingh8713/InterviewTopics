@@ -1,0 +1,245 @@
+
+data class Note(id: Long, msg: String)
+
+
+
+Domain ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+Step-1, UseCase Response
+interface UseCaseResponse<OUT> {
+    fun onSuccess(out: OUT)
+    fun onLoading(isLoading: Boolean)
+    fun onError(e: Exception)
+}
+
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+Step-2, Base UseCase to achieve abstraction
+
+abstract class BaseUseCase<IN, OUT>(private val dispatcher: CoroutineDispatcher) {
+
+    abstract suspend fun run (params: IN): OUT
+
+    suspend fun invoke(params: IN, onResult: UseCaseResponse<OUT>?) = withContext(dispatcher) {
+        onResult?.onLoading(true)
+        try {
+            val result = run(params)
+            onResult?.onSuccess(result)
+            onResult?.onLoading(false)
+
+        } catch(e: Exception) {
+            onResult?.onError(e)
+            onResult?.onLoading(false)
+        }
+    }
+
+}
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+
+Step-2.1, Base Usecase Flow, to achieve abstraction
+abstract class BaseUseCaseFlow1<IN, OUT> (private val dispatcher: CoroutineDispatcher) where OUT: Any {
+
+    abstract suspend fun run (params: IN): Flow<OUT>
+
+    suspend fun invoke(params: IN, onResult: UseCaseResponse<OUT>) {
+        onResult.onLoading(true)
+        run(params)
+            .flowOn(dispatcher)
+            .map {
+                onResult.onSuccess(it)
+                onResult.onLoading(false)
+            }
+            .catch {
+                onResult.onError(it)
+                onResult.onLoading(false)
+            }
+    }
+}
+
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+
+Step-3.1, ( Repo, Declaration of Actions/UseCases)
+interface IRepository {
+    suspend fun addNote(msg: String)
+    suspend fun editNote(id: Long, msg: String)
+    suspend fun getRemoteNotes():Flow<List<Note>>
+    suspend fun getCacheNotes():Flow<List<Note>>
+    suspend fun delete(id: Long)
+    suspend fun getNoteDetail(params: Any?): Detail
+}
+
+Step-3.2, 
+interface IRemoteRepository {
+    suspend fun getRemoteNotes(params: Any?):Flow<List<Note>>
+    suspend fun getNoteDetail(params: Any?): Detail
+}
+
+Step-3.3, 
+interface ICacheRepository {
+    suspend fun addNote(msg: String)
+    suspend fun editNote(id: Long, msg: String)
+    suspend fun getCacheNotes():Flow<List<Note>>
+    suspend fun delete(id: Long)
+}
+
+Step-3.4,
+class RepositoryImpl(iCacheRepository: ICacheRepository, iRemoteRepository: IRemoteRepository):IRepository {
+    
+    @override
+    suspend fun addNote(msg: String) {
+        iCacheRepository.addNote(msg)
+    }
+
+    @override
+    suspend fun editNote(id: Long, msg: String) {
+        iCacheRepository.editNote(id, msg)
+    }
+
+    @override
+    suspend fun getCacheNotes():Flow<List<Note>> {
+        iCacheRepository.getCacheNotes()
+    }
+
+    @override
+    suspend fun delete(id: Long) {
+        iCacheRepository.delete(id)
+    }
+
+    @override
+    suspend fun getRemoteNotes():Flow<List<Note>> {
+        iRemoteRepository.getRemoteNotes()
+    }
+
+    @override
+    suspend fun getNoteDetail(params: Any?): Detail {
+           iRemoteRepository.getNoteDetail(params) 
+    }
+
+}
+
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+Domain
+Step-4.1 (Making "addNote" UseCase )
+
+class AddNoteUseCase(iRepository: IRepository, dispatcher: CoroutineDispatcher) : BaseUseCase<Any?, Note>(dispatcher) {
+    
+    @override
+    suspend fun run(params: Any?): Note {
+        return iRepository.addNote(param)
+    }
+}
+
+Step-4.2 (Making "editNote" UseCase )
+
+class EditNoteUseCase(iRepository: IRepository, dispatcher: CoroutineDispatcher) : BaseUseCase<Any?, Note>(dispatcher) {
+    
+    @override
+    suspend fun run(params: Any?): Note {
+        return iRepository.editNote(param)
+    }
+
+}
+
+Step-4.3 (Making "RemoteNotes" UseCase )
+
+class GetRemoteNotesUseCase(iRepository: IRepository, dispatcher: CoroutineDispatcher) : BaseUseCaseFlow1<Any?, Note>(dispatcher) {
+    
+    @override
+    suspend fun run(params: Any?): Flow<Note> {
+        return iRepository.getNote()
+    }
+
+}
+
+Step-4.4 (Making "deleteNote" UseCase )
+
+class DeleteNoteUseCase(iRepository: IRepository, dispatcher: CoroutineDispatcher) : BaseUseCase<Any?, Note>(dispatcher) {
+    
+    @override
+    suspend fun run(params: Any?): Note {
+        return iRepository.delete(param)
+    }
+    
+}
+
+Step-4.5 (Making "Note Detail", Usecase)
+class NoteDetailUseCase(iRepository: IRepository, dispatcher: CoroutineDispatcher): BaseUseCase<Any?, Detail>(dispatcher) {
+    
+    @override
+    suspend fun run(params: Any?): Detail {
+        return iRepository.getNoteDetail(params)
+    }
+}
+Step-4.6 (Making "CacheNotes" UseCase )
+
+class GetCacheNotesUseCase(iRepository: IRepository, dispatcher: CoroutineDispatcher) : BaseUseCaseFlow1<Any?, Note>(dispatcher) {
+    
+    @override
+    suspend fun run(params: Any?): Flow<Note> {
+        return iRepository.getNote()
+    }
+
+}
+
+Data ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+Data Source Remote (APIs)
+Step-5.1 
+class RemoteRepositoryImpl(apiServices: ApiServices) : IRemoteRepository {
+    
+    @override
+    suspend fun getRemoteNotes(params: Any?):Flow<List<Note>> {
+        return apiServices.getNotes(params)
+    }
+
+    @override
+    suspend fun getNoteDetail(params: Any?):Detail {
+        return apiServices.getNoteDetail(params as Long)
+    }
+
+}
+
+Step-5.2
+class CacheRepositoryImpl(database: Database): ICacheRepository {
+    
+    @override
+    suspend fun addNote(msg: String) {
+            database.insertNote(msg)
+    }
+
+    @override
+    suspend fun editNote(id: Long, msg: String) {
+            database.updateNote(id, msg)
+    }
+
+    @override
+    suspend fun getCacheNotes():Flow<List<Note>> {
+        return database.selectNotes()
+    }
+
+    @override
+    suspend fun delete(id: Long) {
+        database.deleteNote(id)
+    }
+
+}
+
+App ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+Step-6
+
+val apiServices = ApiServices()
+val remoteRepository = RemoteRepositoryImpl(apiServices)
+
+val database = Database()
+val cacheRepository = CacheRepositoryImpl(database)
+
+val iRepository = RepositoryImpl(cacheRepository, remoteRepository)
+
+
+val addNoteUseCase = AddNoteUseCase(iRepository)
+
+addNoteUseCase = 
+
+
+
+
+
+
+

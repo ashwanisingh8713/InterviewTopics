@@ -1,0 +1,42 @@
+OOP Concepts (https://www.scaler.com/topics/java/oops-concepts-in-java/)
+	- Obejct
+	- Class
+	- Inheritence
+	- Encapsulation
+	- Polymorphism
+	- Abstraction
+	- Coupling
+	- Cohesion
+	- Association
+	- Aggregation
+	- Composition
+
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+
+Solid Principle (https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
+	- Single Responsibility 
+	- Open-Closed
+	- Liskov Subtitution 	( Subclasses shuould be substitable for thier base classes)
+	- Interface Segregation	( Many client specific interfaces are better than general-purposed interface)
+	- Dependency Inversion	( Class should depend on interface or abstract class intead of concrete classes and functions)
+
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+
+Clean Arch (https://proandroiddev.com/clean-architecture-data-flow-dependency-rule-615ffdd79e29)
+	App
+		- UI
+		- Presenter
+		- ViewModel
+	Data 
+		- Repository Implementation
+		- DataSources
+		- Data Mapper
+	Domain
+		- It contains generic classes
+		- Entity of sources
+		- Business Logics
+		- Usecases
+		- Abstractions
+		- Repository Interfaces
+
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->

@@ -1,0 +1,111 @@
+
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+Domain 
+Step-1 (Generic UseCase Response)  - It helps to achieve Abstraction & Interface segregation
+
+interface UseCaseResponse<out Type> {
+	fun onSuccess(type: Type)
+	fun onLoading(isLoading: Boolean)
+	fun onError(error: Exception)
+}
+
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+Domain 
+Step-2 (Base UseCase) - It provides Abstraction and achieves Dependecy Inversion
+
+abstract class UseCase<in Params, out Type>() where Params: Any, Type: Any {
+
+	abstract suspend fun run (params: Params?): Type
+
+	fun invoke(scope: CoroutineScope, params: Params?, onResult: UseCaseResult<Type>?) {
+		scope.launch {
+			try {
+				onResult?.onLoading(true)
+				val result = run(params)
+				onResult?.onSuccess(result)
+				onResult?.onLoading(false)
+			}
+			catch(e: Exception) {
+				onResult?.onError(e)
+				onResult?.onLoading(false)
+			}
+		}
+	}
+	
+}
+
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+Domain 
+Step-3 ( Repo, Declaration of Action / UseCase)
+
+interface LoginRepo {
+	fun login(params: Any?): LoginResponse
+}
+
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+Domain 
+Step-4 (Making of Action / UseCase )
+
+class LoginUseCase(loginRepo: LoginRepo) : UseCase<Any?, LoginResponse>() {
+	
+	@override
+	suspend fun run (params: Any?): LoginResponse {
+		return loginRepo.login(params)
+	}
+
+}
+
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+Data
+Step-5 (Repository Implementation) - Here ApiSerices is DataSource
+
+class LoginRepoImpl(dataSource: DataSource): LoginRepo {
+	@override
+	fun login(params: Any?): LoginResponse {
+		return dataSource.login(params)
+	}
+}
+
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+App 
+Step-6
+
+class LoginViewModel(loginUseCase: LoginUseCase): ViewModel {
+	
+	val _successState = MutableStateFlow<LoginResponse>(null)
+	val successState:StateFlow<LoginResponse> get() = _successState
+
+	fun loginRequest(params: Any?) {
+		loginUseCase.invoke(scope=viewModelScope, params, onResult=object:UseCaseResponse<LoginResponse> {
+			@override
+			fun onSuccess(reponse: LoginResponse) {
+				_successState.value = response
+			}
+
+			@override
+			fun onLoading(isLoading: Boolean) {
+
+			}
+
+			@override
+			fun onError(e: Exception) {
+
+			}
+		})
+	}
+
+}
+
+
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+App 
+Step-7
+
+val dataSource = DataSource()
+val loginRepo = LoginRepoImpl(dataSource)
+val loginUseCase = LoginUseCase(loginRepo)
+
+val loginViewModel = LoginViewModel(loginUseCase)
+loginViewModel.loginRequest(params)
+
+

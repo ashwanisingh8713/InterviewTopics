@@ -1,0 +1,22 @@
+Dispatcher is responsible for thread where your coroutines are executed.
+- Dispatcher.Default
+- Dispatcher.IO
+- Dispatcher.Unconfined
+- Dispatcher.Main
+
+CoroutineScope is an Interface and does nothing except provide and associated CoroutineContext.
+
+CoroutineScope is responsible to launch Coroutine.
+
+CoroutineDispatcher is a CoroutineScope too
+
+There are multiple ways to get CoroutineScope to launch Coroutine
+- GlobalScope
+- MainScope
+- CoroutineScope
+
+There are multiple build in CoroutineBuilder which creates Coroutines
+- runBlocking()
+- launch()
+- async()
+- withContext()
