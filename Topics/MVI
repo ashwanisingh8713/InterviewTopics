@@ -1,11 +1,18 @@
 
-(MVI) Model View Intent
-
-Model   - represents the state of UI. For example UI may have different states like loading, loaded, errors, 
+https://medium.com/huawei-developers/stateful-android-apps-with-mvi-architecture-model-view-intent-d106b09bd967
 
 
-View    - In MVI, view is interfaces which is implemented in Activity or Fragment.
+MVI is a Reactive Architecture Pattern which is short for Model -View-Intent.
+
+Model 	 - represents the state of UI. For example UI may have different states like loading, loaded, errors, User button submit state etc.
+
+
+View 	 - In MVI, view is interfaces which is implemented in Activity or Fragment.
         It means to have container which can accept the different model states and display it as a UI.
+
+Intent 	 - The intent simply describes an intention.
+	 - We will be sending models as action to the Intents which can load or show it through Views.
+
 
 Event, Result, State, Effect
 
@@ -13,6 +20,9 @@ Event	- Any User's Event
 Result	- Response from API, DB 
 State	- Data Model Class
 Effect	- UI Changes
+
+
+There’s a lot of separation at every step, and this makes every part extremely easy to test.
 
 
 2(DRS)PL

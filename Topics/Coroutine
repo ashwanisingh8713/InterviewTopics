@@ -1,4 +1,4 @@
-Dispatcher is responsible for thread where your coroutines are executed.
+Dispatcher is responsible for thread creation, where your coroutines are executed.
 - Dispatcher.Default
 - Dispatcher.IO
 - Dispatcher.Unconfined
@@ -15,8 +15,12 @@ There are multiple ways to get CoroutineScope to launch Coroutine
 - MainScope
 - CoroutineScope
 
-There are multiple build in CoroutineBuilder which creates Coroutines
+There are multiple coroutine build in CoroutineBuilder which creates Coroutines
 - runBlocking()
 - launch()
 - async()
 - withContext()
+
+
+Q. In what scenarios, would you want to define your own context element? (https://codingwithmohit.com/coroutines/custom-coroutine-context-uses-cases/)
+A. 
