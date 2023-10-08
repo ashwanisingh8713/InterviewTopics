@@ -1,0 +1,75 @@
+
+There are many types of trees, and they come in various shapes and sizes.
+
+Terminology : There are many terms associated with trees, so it makes sense to get familiar with a few of them before starting.
+	- Like the linked list, trees are made up of nodes.
+	- Each node encapsulates some data and keeps track of its children.
+	- Trees are viewed starting from the top and branching toward the bottom.
+	- In a tree, every child has exactly one parent.
+	- The topmost node in the tree is called the root of the tree. 
+	- A node that has no children is called a leaf.
+
+
+Depth-first traversal : Depth-first traversal starts at the root node and explores the tree as far as possible along each branch before reaching a leaf and then backtracking.
+	- 
+
+Level-order traversal : Level-order traversal is a technique that visits each node of the tree based on the depth of the nodes. Starting at the root, every node on a level is visited before going to a lower level.
+
+-------------------------------------------------------------------------------------
+Binary Tree : Binary trees serve as the basis for many tree structures and algorithms
+
+Major Traversal Types :
+	- in-order, pre-order and post- order traversals.
+
+in-Order Traversal : 
+	- If the current node has a left child, recursively visit this child first. 
+	- Then visit the node itself.
+	- If the current node has a right child, recursively visit this child.
+	- prints the tree in ascending order
+
+Pre-order traversal :
+	- Visits the current node first.
+	- Recursively visits the left and right child.
+
+Post-order traversal :
+	- Recursively visits the left and right child.
+	- Only visits the current node after the left and right child have been visited recursively.
+
+-------------------------------------------------------------------------------------
+Binary Search Tree : BST data structure that facilitates fast lookup, insert, and removal operations.
+	- It performs  O(log n) operation.
+	- The value of a left child must be less than the value of its parent.
+	- The value of a right child must be greater than or equal to the value of its parent.
+
+-------------------------------------------------------------------------------------
+AVL Tree : AVL Tree is known as self-balancing binary search tree.
+
+There are three main states of balance.
+- Perfect balance, (Odd possible number of Nodes)
+- Good Enough balance, (Even possible number of Nodes)
+- Unbalanced, (Binary search trees in this state suffer from various levels of performance loss)
+
+More than one node may have a bad balancing factor, 
+you need to perform the balancing procedure on the bottom-most node containing the invalid balance factor.
+
+There are two types of Balancing Procedure:
+- Left Rotation
+- Right Rotation
+- Right Left Rotation
+- Left Right Rotation
+
+Left child is heavier(thatis, contains more nodes) than the right child. This means that you want
+to use either right or left-right rotations.
+
+Right child is heavier than the left child. This means that you want to use either left or right-left
+rotations.
+
+Left Rotation
+	- In-order traversal for these nodes remains the same.
+	- The depth of the tree is reduced by one level after the rotation.
+
+
+
+
+
+

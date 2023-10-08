@@ -1,0 +1,11 @@
+1. Write Generic Function for input and output parameters.
+2. Kotlin Scope Functions and their return types.
+3. Solid principle
+4. How to create Custom Coroutine Scope.
+5. What is in, out, where?
+6. What is internal, crossinline, expect, reified, sealed, inner, open, operator
+7. What is difference between const and val?
+8. How extension function works?
+9. How to create Generic ParameterizedClass?
+10. How to write getter setter.
+11. In ata class field should not be editable from outside.

@@ -2,14 +2,15 @@ OOP Concepts (https://www.scaler.com/topics/java/oops-concepts-in-java/)
 	- Obejct
 	- Class
 	- Inheritence
-	- Encapsulation
 	- Polymorphism
-	- Abstraction
+	- Abstraction  (It is the process of representing the essential features and hiding the implementation details)
+	- Encapsulation
 	- Coupling
 	- Cohesion
-	- Association
-	- Aggregation
-	- Composition
+	- Association  	(Association represents HAS-A relationship)
+	- Aggregation	(one class object depends on the object of another class, It is one-way relationship)
+	- Composition	(It is a restricted form of aggregation. It is done by creating an instance variable that refers to another object.)
+					In our example, we had created a class "Plane" which had a derived class called "Jet". Here Jet had the attributes defined in the base class Plane. If we delete the Plane class object, the Jet class object also gets deleted as the Jet class was dependent on the Plane class.
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 

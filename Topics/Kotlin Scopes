@@ -1,0 +1,66 @@
+https://blog.mindorks.com/using-scoped-functions-in-kotlin-let-run-with-also-apply/
+
+Scoped functions are functions that execute a block of code within the context of an object.
+The context of the object can be referred to as “it” or “this” 
+
+Let (provides an option to perform an operation on the current object)
+	- It refers to the context of the object by using the “it”
+	- Returns transformed or same object.
+	- Easily helps in providing null checks.
+	- Example 
+		|	val name = Person().name?.let {
+        |	"The name of the Person is: $it"
+    	|	}
+    	|	print(name)
+
+
+
+Run (It is similar to `let` )
+	- It refers to the context of the object by using the "this"
+	- Example
+		|	private fun performRunOperation() {
+		|   val person: Person? = null
+		|    person?.run {
+		|       name = "asdf"
+		|       contactNumber = "1234"
+		|       address = "wasd"
+		|       displayInfo()
+		|   	 }
+		|	}
+
+
+With (It is similar to `Run`)
+	- Here performing null check is difficult
+	- It refers to the context of the object by using the "this"
+	- Example
+		|	private fun performWithOperation() {
+		|   val person: Person? = null
+		|    with(person) {
+		|       this?.name = "asdf"
+		|        this?.contactNumber = "1234"
+		|        this?.address = "wasd"
+		|        this?.displayInfo()
+		|   	 }
+		|	}
+
+apply (It is similar to run, but does not accept return statement)
+	- It does not accept return statement
+	- It changes or assign the values to properties
+	- Example
+		|	Intent().apply {
+	    |    	action = intentAction
+	    |    	data = Uri.parse(intentData)
+	    |	}
+
+also (It is used to chaining scope funtions)
+	- Always returns the same object which it is referring to.
+	- Example
+		|	private fun performAlsoOperation() {
+		|    val name = Person().also {
+		|        print("Current name is: ${it.name}")
+		|        it.name = "ModifiedName"
+		|    }.run {
+		|        "Modified name is: $name\n"
+		|    }
+		|    print(name)
+		| }

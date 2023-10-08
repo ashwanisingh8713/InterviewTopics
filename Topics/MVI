@@ -25,16 +25,6 @@ Effect	- UI Changes
 There’s a lot of separation at every step, and this makes every part extremely easy to test.
 
 
-2(DRS)PL
-	DerivedStateOf
-	DisposableEffect
-	LaunchedEffect
-	produceState
-	rememberCoroutineScope
-	rememberUpdatedState
-	SideEffect
-	snapshotFlow
-
 	
 
 
