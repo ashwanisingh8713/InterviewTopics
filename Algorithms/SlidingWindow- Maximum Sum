@@ -1,0 +1,53 @@
+Find the maximum sum of m consecutive elements of an array.
+
+fun main() {
+    println("Hello, world!!!")
+    maximumSum()
+}
+
+fun maximumSum() {
+    val arr = intArrayOf(7,1, 2, 3, 4, 5)
+    val window = 3
+    var sumOf = Int.MIN_VALUE
+    var tempSum = 0
+    
+	var startIndex = 0
+    var endIndex = arr.size
+    
+    while(startIndex < endIndex-window) {
+        if(startIndex == 0) {
+            tempSum = arr[startIndex]
+            for(windowIndex in 0 until window-1) {
+            	tempSum+= arr[startIndex+windowIndex]
+        	}
+        } else {
+            tempSum += arr[startIndex+window]-arr[startIndex-1]
+        }
+        
+        startIndex++
+    
+        if(tempSum > sumOf) {
+            sumOf = tempSum
+        }
+    }
+    
+    
+	println("Window max sum is $sumOf of $window")
+	
+    
+    arr.forEachIndexed{i, value -> 
+        var reduceWindow = window
+        var tempSum = 0
+        for(j in i until arr.size) {
+            if(reduceWindow == 0) {
+                break
+            }
+            tempSum += arr[j]
+            reduceWindow--
+        }
+        sumOf = Math.max(sumOf, tempSum)
+        
+    }
+    
+    println("BruteForce max sum is $sumOf of $window")
+}

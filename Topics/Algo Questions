@@ -1,3 +1,8 @@
 1. How to insert an Array in BST?
 2. How to sort an unsorted Array?
 3. Design a method that uses balanceFactor to decide whether a node requires balancing or not?
+4. find the words with the prefix CU?
+5. Find the maximum sum of m consecutive elements of an array.
+6. Find the minimum sum of m consecutive elements of an array.
+7. Subarray With Given Sum
+8. You are given an array of N integers, A1, A2 ,..., AN and an integer B. Return the of count of distinct numbers in all windows of size B.
