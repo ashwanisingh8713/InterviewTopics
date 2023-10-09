@@ -3,9 +3,41 @@
 3. Solid principle
 4. How to create Custom Coroutine Scope.
 5. What is in, out, where?
-6. What is internal, crossinline, expect, reified, sealed, inner, open, operator
+6. What is internal, inline, noinline, crossinline, expect, reified, sealed, inner, open, operator, infix, Typealias
 7. What is difference between const and val?
 8. How extension function works?
 9. How to create Generic ParameterizedClass?
 10. How to write getter setter.
 11. In ata class field should not be editable from outside.
+12. How does Navigation Component & NavigationHost Works? (Link : https://medium.com/@KaushalVasava/navigation-in-jetpack-compose-full-guide-beginner-to-advanced-950c1133740)
+Ans : It has three major parts
+	- NavigationGraph : It keeps all navigation and destination data in one place. This includes all of the locations in the App.
+	- NavHost : It shows various destination from your Navigation Graph. NavHost links NavController with a NavigationGraph that specifies the destination.
+	- NavController : NavController is the central api for the Navigation Component. It is stateful and keeps track of the back stack screens.
+	
+	val navController = rememberNavController()
+	NavHost(navController = navController, startDestination = "profile") {
+    	composable("profile") { Profile(/*...*/) }
+    	composable("friendslist") { FriendsList(/*...*/) }
+    
+	}
+
+13. How does Constraint Layout works and how it is better than other layouts?
+14. Android CTS and VTS debugging
+15. What is delegate function in kotlin?
+16. MutableStateFlow vs MutableSharedFlow?
+17. How to pass data from SecondFragment to FirstFragment?
+Ans : Using "savedStateHandle"
+	- In SecondFragment => "navController.previousBackStackEntry?.savedStateHandle?.set(key, value)"
+	- In FirstFragment => "navController.currentBackStackEntry?.savedStateHandle?.get<String>(key)"
+
+18. What is Sealed class?
+19. Sealed Class vs Enum Class
+20. Pagination Library
+21. Write Kotlin Getter and Setter
+Ans : 	var isEmpty: Boolean = false
+			get() = field
+			set(value) {
+				field = value
+			}
+

@@ -1,4 +1,4 @@
-https://blog.mindorks.com/using-scoped-functions-in-kotlin-let-run-with-also-apply/
+LINK : https://blog.mindorks.com/using-scoped-functions-in-kotlin-let-run-with-also-apply/
 
 Scoped functions are functions that execute a block of code within the context of an object.
 The context of the object can be referred to as “it” or “this” 
@@ -17,6 +17,7 @@ Let (provides an option to perform an operation on the current object)
 
 Run (It is similar to `let` )
 	- It refers to the context of the object by using the "this"
+	- Returns transformed or same object.
 	- Example
 		|	private fun performRunOperation() {
 		|   val person: Person? = null
@@ -46,6 +47,7 @@ With (It is similar to `Run`)
 apply (It is similar to run, but does not accept return statement)
 	- It does not accept return statement
 	- It changes or assign the values to properties
+	- This function is used when you wish to change the object's properties or behaviour.
 	- Example
 		|	Intent().apply {
 	    |    	action = intentAction

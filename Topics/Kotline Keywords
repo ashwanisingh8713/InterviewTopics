@@ -1,0 +1,127 @@
+Q. What is internal, inline, noinline, crossinline, expect, reified, sealed, inner, open, operator, infix, Typealias
+
+Internal: Specifies that a declaration is only visible within the same module.
+	
+	|	internal class InternalClass {
+    |		// visible within the same module
+	|	}
+
+
+Inline: A function modifier that suggests the compiler to insert the function code directly where it's called, potentially improving performance.
+	- When you need to access higher-order functions.
+	- When you need to allocate memory more efficiently.
+	- You should not turn a huge function "inline" because it will downgrade the performance of the application.
+	- Inline functions are useful when a function accepts another function or lambda as a parameter.
+
+	|	inline fun performOperation(a: Int, b: Int): Int {
+    |		return a + b
+	|	}
+
+
+
+Noinline: It is used with lambda param, Specifies that a lambda parameter should not be inlined.
+
+	|	inline fun higherOrderFunction(block: () -> Unit, noinline anotherBlock: () -> Unit) {
+    |		// ...
+	|	}
+
+Crossinline: Specifies that a lambda passed as a parameter to an inline function should not allow non-local returns.
+	Link - https://amitshekhar.me/blog/crossinline-in-kotlin
+
+	|	fun guide() {
+    |		print("guide start")
+    |		teach {
+    |    		print("teach")
+    |    		return
+    |		}
+    |		print("guide end")
+	|	}
+	|
+	|	inline fun teach(crossline abc: () -> Unit) {
+	|	    abc()
+	|	}
+
+Expect: Used in multi-platform projects, indicating that the actual implementation will be provided in platform-specific modules.
+
+	| expect fun platformSpecificFunction(): String
+
+Reified: Used in inline functions with generic types to access type information at runtime.
+	
+	|		inline fun <reified T> checkType(value: Any) {
+	|   		if (value is T) {
+	|        		println("It's of type $T")
+	|    		} else {
+	|        		println("It's not of type $T")
+	|    		}
+	|		}
+
+Sealed: Marks a class as "sealed," which means that all its subclasses must be defined in the same file. This is often used with when expressions.
+
+	|	sealed class Result {
+    |		data class Success(val data: String) : Result()
+    |		data class Error(val message: String) : Result()
+	|	}
+
+Inner: Declares a nested class. An inner class has access to the members of its outer class.
+
+	|	class Outer {
+    |		private val outerValue = 10
+    |
+    |		inner class Inner {
+    |    		fun printOuterValue() {
+    |        		println("Outer value: $outerValue")
+    |    		}
+    |		}
+	|	}
+
+Open: Allows a class to be subclassed, Allows a function to be overridden.
+
+	|	open class BaseClass {
+    |		open fun someFunction() {
+    |    		// implementation
+    |		}
+	|	}
+	|
+	|	class DerivedClass : BaseClass() {
+    |		override fun someFunction() {
+    |    		// overridden implementation
+    |		}
+	|	}
+
+
+Operator: Declares a function as an operator, 
+	- letting you overload operations like + or * for your types.
+	- allowing instances of a class to be used with various operators.
+
+	|	data class Point(val x: Int, val y: Int)
+	|
+	|	operator fun Point.plus(other: Point): Point {
+    |		return Point(this.x + other.x, this.y + other.y)
+	|	}
+	|
+	|	val result = Point(1, 2) + Point(3, 4)
+
+
+Infix: Allows you to call a function with one argument without using dot or parentheses, improving readability.
+	- Marks a function as infix, allowing it to be called using infix notation.
+
+	|	infix fun String.customConcat(other: String): String {
+    |		return this + " " + other
+	|	}
+	|
+	|	val result = "Hello" customConcat "Kotlin"
+	
+
+Typealias: Creates an alternative name for a type, providing a way to make code more enhanced and readable.
+
+	|	typealias Name = String
+	|
+	|	fun greet(name: Name) {
+    |		println("Hello, $name!")
+	|	}	
+
+
+
+
+
+

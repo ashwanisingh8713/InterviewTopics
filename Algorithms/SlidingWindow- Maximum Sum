@@ -1,4 +1,4 @@
-Find the maximum sum of m consecutive elements of an array.
+// Find the maximum sum of m consecutive elements of an array.
 
 fun main() {
     println("Hello, world!!!")
@@ -16,8 +16,7 @@ fun maximumSum() {
     
     while(startIndex < endIndex-window) {
         if(startIndex == 0) {
-            tempSum = arr[startIndex]
-            for(windowIndex in 0 until window-1) {
+            for(windowIndex in 0 until window) {
             	tempSum+= arr[startIndex+windowIndex]
         	}
         } else {
@@ -33,7 +32,7 @@ fun maximumSum() {
     
     
 	println("Window max sum is $sumOf of $window")
-	
+
     
     arr.forEachIndexed{i, value -> 
         var reduceWindow = window
