@@ -1,11 +1,11 @@
-	DerivedStateOf
-	DisposableEffect
-	rememberCoroutineScope
-	rememberUpdatedState
-	SideEffect
-	snapshotFlow
-	produceState
-	LaunchedEffect
+DerivedStateOf			: convert one or multiple state objects into another state
+DisposableEffect		: effects that require cleanup, For side effects that need to be cleaned up after the keys change or if the composable leaves the Composition, use DisposableEffect. 
+rememberCoroutineScope	: obtain a composition-aware scope to launch a coroutine outside a composable
+rememberUpdatedState	: reference a value in an effect that shouldn't restart if the value changes
+SideEffect				: publish Compose state to non-compose code
+snapshotFlow			: convert Compose's State into Flows
+produceState			: convert non-Compose state into Compose state
+LaunchedEffect 			: run suspend functions in the scope of a composable
 	
 2(DRS) PL
 

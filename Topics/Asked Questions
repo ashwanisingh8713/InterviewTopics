@@ -1,3 +1,4 @@
+
 1. Write Generic Function for input and output parameters.
 2. Kotlin Scope Functions and their return types.
 3. Solid principle
@@ -40,4 +41,25 @@ Ans : 	var isEmpty: Boolean = false
 			set(value) {
 				field = value
 			}
+
+22. What does mean invariant in programming? (Link : https://blog.stackademic.com/generics-in-kotlin-14d1b03f1e9a)
+23. What is Covariance
+24. What kind of securities are used at app end?
+25. What is difference between Barrier and Guideline? (Link : https://stackoverflow.com/questions/47114672/what-is-difference-between-barrier-and-guideline-in-constraint-layout)
+26. Android Launch Mode.
+27. How Android Work Manager works?
+28. Android Services?
+29. IntentService and JobIntentService is deprecated, then what should we use now?
+30. Android Architecture?
+Ans : Apps, Framework, Android Runtime Libraries, Hardware Accelaration Layer, Kernerl (Driver, Power Management)
+31. how to stop fragment from recreating on configuration change?
+Ans : Using setRetainInstance(true), inside Fragment.
+	In Activity.onCreate() system checks the savedInstanceState is null. If it is, create your Fragments. If not, then don't as the system will automatically restore them.
+32. JetPack Categories.
+Ans : Foundation, Architecture, UI, Behaviour
+33. What is Cold Flow vs Hot Flow? (Link : https://amitshekhar.me/blog/cold-flow-vs-hot-flow)
+34. how to convert any Callback to Coroutines in Kotlin? (Link : https://amitshekhar.me/blog/callback-to-coroutines-in-kotlin)
+35. Slealed Class vs Enum Class (Link : https://www.linkedin.com/pulse/sealed-vs-enum-classes-kotlin-sagar-malhotra/)
+36. Design Cache system.
+
 

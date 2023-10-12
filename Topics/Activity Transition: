@@ -1,0 +1,27 @@
+Activity Transition: (Link : https://stackoverflow.com/questions/8515936/android-activity-life-cycle-what-are-all-these-methods-for)
+
+When moving from First Activity -> Second Activity:
+
+	first_activity  : onPause()
+
+	second_activity : onCreate()
+
+	second_activity : onStart()
+
+	second_activity : onResume()
+
+	first_activity  : onStop()
+
+When moving from Second Activity -> First Activity:
+
+	second_activity : onPause()
+
+	first_activity  : onRestart()
+
+	first_activity  : onStart()
+
+	first_activity  : onResume()
+
+	second_activity : onStop()
+
+	second_activity : onDestroy()

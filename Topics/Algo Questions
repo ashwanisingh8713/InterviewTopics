@@ -6,3 +6,12 @@
 6. Find the minimum sum of m consecutive elements of an array.
 7. Subarray With Given Sum
 8. You are given an array of N integers, A1, A2 ,..., AN and an integer B. Return the of count of distinct numbers in all windows of size B.
+9. palindrome Integer
+10. palindrome String
+11. A sequence of 20 bits starts with 0 and ends with 1.
+you can access any element and you need to find 0 followed by 1.
+Can you find a 0-1 pair by accessing at most five elements?
+12. You are responsible for collecting signature from 12 tenants in a building/
+For each tenats, you know the period of time when they are at home.
+you would like to collect all signatures by visiting the building as few times as possible.
+(Link : https://blog.jetbrains.com/kotlin/2023/09/algorithmic-challenges-in-kotlin-live/)in Video

@@ -12,6 +12,14 @@ OOP Concepts (https://www.scaler.com/topics/java/oops-concepts-in-java/)
 	- Composition	(It is a restricted form of aggregation. It is done by creating an instance variable that refers to another object.)
 					In our example, we had created a class "Plane" which had a derived class called "Jet". Here Jet had the attributes defined in the base class Plane. If we delete the Plane class object, the Jet class object also gets deleted as the Jet class was dependent on the Plane class.
 
+
+	Both Composition and Aggregation are types of association which are used to represent the relationship between two classes. But they are absolutely different from each other. 
+	Aggregation relation is “has-a” and composition is “part-of” relation.
+	Composition is a strong Association whereas Aggregation is a weak Association.
+
+
+
+
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 
 Solid Principle (https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
