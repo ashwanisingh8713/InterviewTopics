@@ -26,7 +26,7 @@ Ans : It has three major parts
 13. How does Constraint Layout works and how it is better than other layouts?
 14. Android CTS and VTS debugging
 15. What is delegate function in kotlin?
-16. MutableStateFlow vs MutableSharedFlow?
+16. MutableStateFlow vs MutableSharedFlow? (Link : https://amitshekhar.me/blog/stateflow-and-sharedflow)
 17. How to pass data from SecondFragment to FirstFragment?
 Ans : Using "savedStateHandle"
 	- In SecondFragment => "navController.previousBackStackEntry?.savedStateHandle?.set(key, value)"
@@ -60,6 +60,11 @@ Ans : Foundation, Architecture, UI, Behaviour
 33. What is Cold Flow vs Hot Flow? (Link : https://amitshekhar.me/blog/cold-flow-vs-hot-flow)
 34. how to convert any Callback to Coroutines in Kotlin? (Link : https://amitshekhar.me/blog/callback-to-coroutines-in-kotlin)
 35. Slealed Class vs Enum Class (Link : https://www.linkedin.com/pulse/sealed-vs-enum-classes-kotlin-sagar-malhotra/)
-36. Design Cache system.
+36. Design Cache system, and how it can be implemented in Database? (Link : https://medium.com/@narengowda/designing-the-caching-system-e42c6938df6a)
+37. How do we achieve erase of the object from a random position in least time possible?
+38. Kotlin Delegate properties and How it works?
+39. What is varience in java?
+40. Explain kotlin coroutine stackless.
+41. What is smallE and Playintegrity
 
 
