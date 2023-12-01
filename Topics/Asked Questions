@@ -65,6 +65,8 @@ Ans : Foundation, Architecture, UI, Behaviour
 38. Kotlin Delegate properties and How it works?
 39. What is varience in java?
 40. Explain kotlin coroutine stackless.
-41. What is smallE and Playintegrity
+41. What is smali and Playintegrity
+42. minifyenabled vs shrinkresources?
+43. coroutineScope vs supervisorScope ?
 
 

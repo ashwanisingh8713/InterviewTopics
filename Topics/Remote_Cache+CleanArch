@@ -1,0 +1,69 @@
+
+
+Two Interface for Seperate Use Case 
+Single Interface which includes both Remote+Cache Use Cases
+
+Step - 1
+	interface IRemoteData 
+		- uc-r-1 
+		- uc-r-2
+
+Step - 2
+	interface ICacheData
+		- uc-c-3
+		- uc-c-4
+
+
+Step - 3
+	interface IRepository 
+		- uc-1
+		- uc-2
+		- uc-3
+		- uc-4
+
+Step - 4
+	class RepositoryImp(val R: IRemoteData, val C: ICacheData) : IRepository {
+		- uc-1
+			- uc-r-1
+		- uc-2
+			- uc-r-2
+		- uc-3
+			- uc-c-3
+		- uc-4
+			- uc-c-4
+	}
+
+
+Step - 5
+	class RemoteDataImpl(net: HttpClient) :IRemoteData {
+		- uc-r-1 
+			- net.work-1
+
+		- uc-r-2
+			- net.work-2
+	}
+
+
+Step - 6
+	class CacheDataImpl(cache: DBManager) :ICacheData {
+		- uc-c-3
+			- cache.work-1
+
+		- uc-c-4
+			- cache.work-2
+	}
+
+Step - 7
+	val remote : IRemoteData = RemoteDataImpl(netObj)
+	val cache : ICacheData = CacheDataImpl(dbObj)
+	val repository : IRepository = RepositoryImp(R = remote, C = cache)
+
+
+Step - 8
+	Pass "repository" in UseCase Object
+	
+
+
+
+	
+
