@@ -1,0 +1,14 @@
+
+
+
+1. Generate an SSH key pair in your terminal with the command below.
+Leave passphrase empty.
+
+ssh-keygen -t ed25519 -f ~/.ssh/project_key -C ashwanisingh8713@gmail.com
+
+2. Copy the public SSH key and add it to your repository as a deploy key in GitHub.
+pbcopy < ~/.ssh/project_key.pub
+
+3. Copy the private SSH key and paste it in the field below.
+pbcopy < ~/.ssh/project_key
+

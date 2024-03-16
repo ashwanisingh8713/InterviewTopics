@@ -1,0 +1,37 @@
+
+https://www.lambdatest.com/learning-hub/kotlin-unit-testing
+
+What is unit testing?
+	- Unit tests are small isolated tests that check whether a method, class, functionality, or component implements its business logic correctly.
+	- They are extremely useful since they are granular tests that cover a small surface area of your application at a time and typically mock out external collaborators (such as databases, networks, I/O, etc.).
+	- 
+
+What are the benefits of writing unit tests?
+	- Unit tests run fast (within an order of milliseconds to seconds) and are low fidelity. They do not interact with databases, network services, or other system components like integration or E2E (End to End) tests do.
+
+	- They are an essential refactoring aid and safety net in every developer's toolbox since it allows a developer to comfortably change their application code while knowing that if they unintentionally break any class/method, then the unit test suite would catch those.
+
+
+** Mocking in Unit Test
+	
+
+
+
+
+
+
+** Annotation 	-	https://www.lambdatest.com/blog/tutorial-on-junit-annotations-in-selenium-with-examples/
+	* Common
+		- @BeforeClass
+		- @Before
+		- @Test
+		- @After
+		- @AfterClass
+		- @Ignore
+
+	* For Specific Purposes
+		- @ParameterizedTest
+		- @RunWith
+		- @RepeatedTest
+		- @Parameters
+	

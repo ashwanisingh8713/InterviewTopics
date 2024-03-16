@@ -1,0 +1,42 @@
+Befor Start
+	- NPM should be installed
+
+
+To build web java script Yarn file	
+	- ./gradlew kotlinUpgradeYarnLock  
+
+
+// https://gist.github.com/karlrwjohnson/a631cbda6b2fb316bc0a9f37156eae5d
+
+Server Configuration (Port, Mode, ... etc)
+    // https://github.com/JetBrains/kotlin/blob/3e251668324f3ac2f0819ca6bef0ce97ca26f39b/libraries/tools/kotlin-gradle-plugin/src/main/kotlin/org/jetbrains/kotlin/gradle/targets/js/webpack/KotlinWebpackConfig.kt
+
+
+
+(https://kotlinlang.org/docs/js-project-setup.html#run-task)
+To build & run web app 
+	- ./gradlew :composeApp:jsBrowserDevelopmentRun
+	- ./gradlew jsBrowserRun
+	- ./gradlew jsRun --continuous  (After making changes to the source, To automatically trigger a re-build of your application)
+	- ./gradlew jsRun -t	(After making changes to the source, To automatically trigger a re-build of your application)
+
+
+Set up a Kotlin-JS project
+	- https://kotlinlang.org/docs/js-project-setup.html
+
+
+***********
+(https://kotlinlang.org/docs/js-project-setup.html#building-executables)
+Building executables
+	- ./gradlew jsBrowserProductionWebpack
+	- ./gradlew jsBrowserDevelopmentWebpack 
+	- Command line tools does not accept Host, Port  and DevServer properties should be commented.
+	- Generated build path can be setup in Build.grale -> JS(IR) -> distribution -> FolderName
+	
+	
+
+
+
+
+
+

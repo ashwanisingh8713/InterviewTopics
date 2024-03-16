@@ -30,8 +30,9 @@ Run (It is similar to `let` )
 		|	}
 
 
-With (It is similar to `Run`)
-	- Here performing null check is difficult
+With (It is similar to `run`. The main difference is that `run` is a dot method and `with` is a higher-order function.)
+	- It is a non-extension function, In this we pass an object as its first parameter and a block of code.
+	- Here performing null check is difficult.
 	- It refers to the context of the object by using the "this"
 	- Example
 		|	private fun performWithOperation() {
@@ -44,9 +45,8 @@ With (It is similar to `Run`)
 		|   	 }
 		|	}
 
-apply (It is similar to run, but does not accept return statement)
-	- It does not accept return statement
-	- It changes or assign the values to properties
+apply (It returns the operated object itself after executing the block of code.)
+	- It change or assign the values to properties. It’s handy for configuring or initialising objects.
 	- This function is used when you wish to change the object's properties or behaviour.
 	- Example
 		|	Intent().apply {

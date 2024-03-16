@@ -1,0 +1,19 @@
+Top 100 Kotlin Interview Questions and Answers
+	- https://shirsh94.medium.com/top-100-kotlin-interview-questions-and-answers-d1f6785f336a
+
+
+iOS Interview Questions 2023
+	- https://medium.com/@knoo/ios-interview-questions-2023-7fd56079f363
+
+
+Become More Senior Developer with these 15 Android Studio / IntelliJ IDEA Tips & Tricks
+	- https://medium.com/@mmbialas/become-more-senior-developer-with-these-15-android-studio-intellij-idea-tips-tricks-b2822d3718f4
+
+
+Android Kotlin Coroutines interview questions
+	- https://medium.com/@sujathamudadla1213/android-kotlin-coroutines-interview-questions-6118b7725f54
+
+
+
+
+

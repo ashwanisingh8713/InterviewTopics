@@ -1,0 +1,55 @@
+
+
+Amazing tool to create KMM template 
+	- https://terrakok.github.io/Compose-Multiplatform-Wizard/
+
+Jetpack Compose Tools & Lib & Framework finding
+	- https://www.jetpackcompose.app/
+
+Kotlin Multiplatform Wizard
+	- https://kmp.jetbrains.com/
+
+
+Amper Build tool for project configuration.
+	- https://blog.jetbrains.com/blog/2023/11/09/amper-improving-the-build-tooling-user-experience/
+
+	
+
+Kotlin Multiplatform Template & Content Structure 
+	
+
+SOLID+CLEAN+KOIN
+
+	- Domain
+		- Generic Base Classes
+		- Usecase Interfaces
+		- Usecase Classes
+		- Entity Data Model classes
+
+	- Data
+		- Usecase Repo Implementation
+		- Data Model classes
+		- Data Mapper classes
+
+	- Dependency Injection
+		- Koin
+			- Usecase Repo Module
+			- Usecase Module
+			- ViewModel Module
+			- HTTP Client Module
+			- Database Client Module
+			- Coroutine Dispatcher Module
+	- Presentation
+		- Theme
+			- Color
+			- Font Type
+			- Font Size
+			- CompositionLocalProvider
+		- Navigation
+			- Voyager
+		- Screens
+			- ScreenState Data Class
+			- ViewModel
+				- SharedFlow and StateFlow
+
+

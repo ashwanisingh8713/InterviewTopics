@@ -1,4 +1,4 @@
-Q. What is internal, inline, noinline, crossinline, expect, reified, sealed, inner, open, operator, infix, Typealias
+Q. What is internal, inline, noinline, crossinline, expect, accept, reified, sealed, inner, open, operator, infix, Typealias
 
 Internal: Specifies that a declaration is only visible within the same module.
 	
@@ -19,7 +19,7 @@ Inline: A function modifier that suggests the compiler to insert the function co
 
 
 
-Noinline: It is used with lambda param, Specifies that a lambda parameter should not be inlined.
+Noinline: It is used with lambda param, that specifies a lambda parameter should not be inlined.
 
 	|	inline fun higherOrderFunction(block: () -> Unit, noinline anotherBlock: () -> Unit) {
     |		// ...
@@ -28,16 +28,16 @@ Noinline: It is used with lambda param, Specifies that a lambda parameter should
 Crossinline: Specifies that a lambda passed as a parameter to an inline function should not allow non-local returns.
 	Link - https://amitshekhar.me/blog/crossinline-in-kotlin
 
-	|	fun guide() {
-    |		print("guide start")
+	|	fun teacher() {
+    |		print("start teaching")
     |		teach {
     |    		print("teach")
-    |    		return
+    |    		// return is not allowed here
     |		}
-    |		print("guide end")
+    |		print("end teaching")
 	|	}
 	|
-	|	inline fun teach(crossline abc: () -> Unit) {
+	|	inline fun teach(crossinline abc: () -> Unit) {
 	|	    abc()
 	|	}
 
@@ -46,8 +46,9 @@ Expect: Used in multi-platform projects, indicating that the actual implementati
 	| expect fun platformSpecificFunction(): String
 
 Reified: Used in inline functions with generic types to access type information at runtime.
+	- You can only use reified in combination with an inline function. 
 	
-	|		inline fun <reified T> checkType(value: Any) {
+	|		inline fun <reified T> myGenericFun(value: Any) {
 	|   		if (value is T) {
 	|        		println("It's of type $T")
 	|    		} else {
@@ -55,7 +56,10 @@ Reified: Used in inline functions with generic types to access type information 
 	|    		}
 	|		}
 
-Sealed: Marks a class as "sealed," which means that all its subclasses must be defined in the same file. This is often used with when expressions.
+Sealed: Mark a class or interface as "sealed", It represents restricted class hierarchies that all its subclasses must be defined in the same file, module or package. 
+		- This is often used with when expression.
+		- Sealed classes can have different set of values, But in Enum holds the set of values is same and restricted.
+		- Sealed subclass can have multiple instances, But In Enum constant exists only as a single instance. 
 
 	|	sealed class Result {
     |		data class Success(val data: String) : Result()
@@ -119,6 +123,8 @@ Typealias: Creates an alternative name for a type, providing a way to make code 
 	|	fun greet(name: Name) {
     |		println("Hello, $name!")
 	|	}	
+
+	
 
 
 

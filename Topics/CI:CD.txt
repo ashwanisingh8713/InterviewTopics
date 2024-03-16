@@ -1,0 +1,11 @@
+What is a CI/CD pipeline?
+	- https://circleci.com/blog/what-is-a-ci-cd-pipeline/
+
+If you want to learn more about setting up the build and test job for Android you can read about it in following post.
+	- https://circleci.com/blog/building-android-on-circleci/ 
+
+If you want to learn more about setting up the build and tests on iOS, you can read more in this tutorial in the CircleCI documentation.
+	- https://circleci.com/docs/testing-ios/
+
+Circle CI Android Sample Projet from GitHub
+	- https://github.com/CircleCI-Public/android-testing-circleci-examples

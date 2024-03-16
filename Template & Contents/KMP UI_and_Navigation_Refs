@@ -1,0 +1,91 @@
+
+Necter ***  (UI Reference can be taken - Android Compose)
+    https://github.com/kelvinbush/Nectar
+    - Login
+    - Tabs
+    - List Item in Card (Title, Subtitle, Image, rating, price)
+    - Login
+    - SignUp
+    - Forgot Password
+    - Credit Card Add Screen
+    - Navigation Component
+
+
+Jexmon -- E-commerce-Complete-Jetpack-Compose-UI  *** (UI Reference can be taken - Android Compose)
+    - https://github.com/Raziur306/E-commerce-Complete-Jetpack-Compose-UI
+    -  Welcome Pager Screen
+    - SignIn (Email, Password, Social Login Icons, error message)
+    - Login Success Screen
+    - Forgot Password
+    - SignUp (Email, Password, Confirm Password)
+    - Profile Tab page options
+    - Home Tab page options
+    - Tabs
+    - OTP Screen
+
+
+
+JetCompose FlowerUI -- Online-Flora-Go-Go-App-UI-Android (- Android Compose)
+https://github.com/meshramaravind/Online-Flora-Go-Go-App-UI-Android.git
+    - Login
+    - Cart Item Screen
+
+
+
+Kmm-Template (Basic KMM Sample)
+    https://github.com/ranger163/kotlin-multiplatform-template
+     - List UI
+     - Detail Screen
+     - Only Vertical List Item in Card (Image, Title, Subtitle, price)
+     - Basic Detail Page
+     - Gradle build source module configuration
+
+
+
+    It has good example of Navigation, Tabs and ViewModel.
+Novelty (https://github.com/samandar-me/novelty.git - KMP Compose)
+    - Voyager Navigation
+    - Bottom Tab Navigation
+    - Inner Top-Tab Navigation
+    - SQDelight
+    - MOKO-ViewModel
+    - Theme Color
+    - Theme Color (platform specific)
+    - Very Good Use of expect/actual
+    - Native Uses of SharedPref and NSUserDefaults
+    - Loading of ViewModel + StateFlow with Good Architecture
+
+
+TimePlanner (https://github.com/v1tzor/TimePlanner.git - Android Only)
+    - Voyager Navigation
+    - Bottom Tab Navigation         - TabsScreen.kt
+    - ModalNavigationDrawer ( Hamburger Drawer) - TabsScreen.kt
+    - Feature module (pattern) implementation
+    - MVI Pattern
+
+DecomposeNavigation (https://github.com/Lilytreasure/DecomposeNavigation.git - KMP Compose)
+    - Decompose Navigation
+    - Bottom Tab Navigation
+
+Rick-N-Morty-KMM (https://github.com/daniaviladomingo/kmm.git - KMP Compose)
+    - Voyager Navigation
+    - MVI
+    - Flow
+    - Sqldelight
+    - Ktor
+    - Koin
+    - Libres (Resources generation)
+    - Android,iOS, Web, Desktop
+    
+
+
+
+CryptoStonks5000 (https://koenig-media.raywenderlich.com/uploads/2021/06/CryptoStonks5000.zip)
+	- Android
+	- Kotlin-Reactive Streams  SharedFlow and StateFlow
+	- Clean Architecture 
+	- MVVM Pattern
+	- SharedFlow
+	- StateFlow
+
+

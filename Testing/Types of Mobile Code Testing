@@ -1,0 +1,22 @@
+https://stackoverflow.com/questions/30393629/difference-between-android-instrumentation-test-and-unit-test-in-android-studio
+https://stackoverflow.com/questions/2741832/what-is-the-difference-between-unit-tests-and-functional-tests/65259827#65259827
+
+
+Local Unit test: 
+	- JUnit, Mockito, PowerMock
+	- Unit tests -	src/test/java
+
+Instrumentation tests(a kind of functional tests): 
+	- Espresso, Robolectric, Robotium
+	- Functional tests(Integration, UI)	-	src/androidTest/java
+
+
+Using assets in Android unit-test project
+	- https://blog.codetitans.pl/post/howto-assets-android-unittest/
+
+
+The codelabs in this series are:
+* [Testing Basics](https://codelabs.developers.google.com/codelabs/advanced-android-kotlin-training-testing-basics)
+* [Introduction to Test Doubles and Dependency Injection](https://codelabs.developers.google.com/codelabs/advanced-android-kotlin-training-testing-test-doubles)
+* [Survey of Testing Topics](https://codelabs.developers.google.com/codelabs/advanced-android-kotlin-training-testing-survey)
+

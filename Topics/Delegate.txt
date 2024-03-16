@@ -1,0 +1,14 @@
+https://kotlinlang.org/docs/delegated-properties.html
+
+The syntax is: val/var <property name>: <Type> by <expression>. 
+
+The expression after `by` is a delegate, because the get() (and set()) that correspond to the property will be delegated to its getValue() and setValue() methods.
+
+
+ssh-keygen -t ed25519 -f ~/.ssh/project_key -C ashwanisingh8713@gmail.com
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+https://dzone.com/articles/variance-in-java
+
+Q. What is Variance?
+- Variance refers to how subtyping, between more complex types, relates to subtyping between their components.
+
+There are four types of Variance.
+	- Covariant : if it accepts subtypes but not supertypes
+		- Collection<? extends Object>. In other words, the wildcard with an extends-bound (upper bound) makes the type covariant.
+	- Contravariant : if it accepts supertypes but not subtypes
+					: it can only be consumed and never produced
+	- Bivariant : if it accepts both supertypes and subtypes
+	- Invariant : does not accept either supertypes nor subtypes
+
+Variance refers to how subtyping, between more complex types, relates to subtyping between their components.
+
+
+how Subtyping between more complex types relates to subtyping between their components.
