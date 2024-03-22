@@ -1,0 +1,42 @@
+pipeline {
+    agent {
+        docker { image 'cimg/android:2024.01.1' }
+    }
+    environment {
+        GITHUB_TOKEN = credentials('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')
+        DIR = '/var/jenkins_home/workspace/Android-CI'
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                sh 'git clone https://$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@github.com/ashwanisingh8713/android-circleci-example.git'
+            }
+        }
+        stage('Setup') {
+          steps {
+            dir(DIR) {
+              sh 'chmod +x ./gradlew'
+            }
+          }
+        }
+        stage('Build') {
+          steps {
+            dir(DIR) {
+                sh './gradlew build'
+            }
+          }
+        }
+        stage('Run tests') {
+            steps {
+                dir(DIR) {
+                    sh './gradlew test'
+                }
+            }
+        }
+    }
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}

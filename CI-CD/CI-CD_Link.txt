@@ -1,0 +1,36 @@
+
+https://medium.com/@devjorgecastro/how-to-build-a-ci-cd-pipeline-for-android-with-jenkins-part-1-265b62b706e6
+
+
+https://medium.com/simform-engineering/getting-started-with-jenkins-android-1138ee3d1e99
+https://www.vogella.com/tutorials/JenkinsAndroid/article.html
+https://medium.com/temy/android-ci-with-jenkins-docker-and-kitematic-step-by-step-b40ddbcaf5ff   ****
+
+
+How do I download the Android SDK without downloading Android Studio?
+https://stackoverflow.com/questions/37505709/how-do-i-download-the-android-sdk-without-downloading-android-studio#comment107561735_42179456
+
+
+
+
+
+
+Admin Password Location 
+/var/jenkins_home/secrets/initialAdminPassword
+
+
+JAVA_HOME = /opt/java/openjdk
+
+
+
+eb0e4c79ac3ae1899f49d9ded9b54120dcacfa020d9ae2f0d812b056bb72de0d
+
+
+
+docker exec -u root -t -i eb0e4c79ac3ae1899f49d9ded9b54120dcacfa020d9ae2f0d812b056bb72de0d /bin/bash
+
+
+
+
+
+

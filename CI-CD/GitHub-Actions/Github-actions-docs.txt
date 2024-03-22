@@ -1,0 +1,29 @@
+
+Automating Android Builds with GitHub Actions: From Debug to Release
+	- https://kashifahmad.medium.com/automating-android-builds-with-github-actions-from-debug-to-release-88e76612740d
+
+Build Generate
+	- https://github.com/r0adkll/sign-android-release
+
+Storing App Signing Secrets on Github
+	- https://www.kodeco.com/19407406-continuous-delivery-for-android-using-github-actions/page/2
+
+	sathya@panta.co.in
+
+	Android Architect
+
+
+Setup Android SDK Tools
+	- https://github.com/android-actions/setup-android
+	- https://github.com/marketplace/actions/setup-android-sdk-tools
+
+
+Lint, Coding Guideline workflow setup
+	- https://github.com/jonasb/android-problem-matchers-action/tree/master/.github
+
+Market Place of Android CI-CD plugin
+	- https://github.com/marketplace?category=&type=actions&verification=&copilot_app=&query=sort%3Apopularity-desc+android
+
+
+	
+	

@@ -1,0 +1,26 @@
+
+Jenkins Credintials
+    UserName : Ashwani
+    Password : 2cae71a3b87945f481091655a10b1fe0
+
+Step - 1
+
+Jenkins dashboard -> Manage Jenkins -> System -> Global properties -> Select Environment variables
+
+JAVA_HOME = /opt/java/openjdk
+
+Android SDK tools
+wget https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
+
+wget http://dl.google.com/android/android-sdk_r24.2-linux.tgz
+
+
+
+http://dl.google.com/android/android-sdk_r24.2-linux.tgz
+https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
+
+android_sdk/cmdline-tools/latest/bin/sdkmanager --install "cmdline-tools;version"
+
+
+Docker cimg/android:2024.01.1-browsers amd64
+
