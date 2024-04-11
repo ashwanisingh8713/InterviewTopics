@@ -1,11 +1,29 @@
-DerivedStateOf			: convert one or multiple state objects into another state
-DisposableEffect		: effects that require cleanup, For side effects that need to be cleaned up after the keys change or if the composable leaves the Composition, use DisposableEffect. 
-rememberCoroutineScope	: obtain a composition-aware scope to launch a coroutine outside a composable
-rememberUpdatedState	: reference a value in an effect that shouldn't restart if the value changes
-SideEffect				: publish Compose state to non-compose code
-snapshotFlow			: convert Compose's State into Flows
-produceState			: convert non-Compose state into Compose state
-LaunchedEffect 			: run suspend functions in the scope of a composable
+
+
+https://medium.com/@mortitech/exploring-side-effects-in-compose-f2e8a8da946b
+https://proandroiddev.com/mastering-side-effects-in-jetpack-compose-b7ee46162c01
+
+DerivedStateOf			
+	- It is used to derive new state based on the values of other state variables
+DisposableEffect		
+	- effects that require cleanup, For side effects that need to be cleaned up after the keys change or if the composable leaves the Composition, use DisposableEffect. 
+rememberCoroutineScope	
+	- It is used to create CoroutineScope that is tied to Composable function's lifecycle and It can be used to obtain a composition-aware scope to launch a coroutine outside a composable.
+rememberUpdatedState	
+	- reference a value in an effect that shouldn't restart if the value changes
+SideEffect				
+	- SideEffect is used to publish compose state to non-compose code.
+	- SideEffect is triggered on every recomposition.
+snapshotFlow			
+	- convert Compose's State into Flows
+produceState			
+	- convert non-Compose state into Compose state
+LaunchedEffect 			
+	- run suspend functions in the scope of a composable
 	
 2(DRS) PL
+
+
+
+
 

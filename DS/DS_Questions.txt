@@ -1,0 +1,17 @@
+
+
+LinkedList : (LILO)
+	Q1. Reverse a linked list using Recurssion?
+	Q2. Reverse a linked list using manipulate the nodes?
+
+
+	Q3. Given a linked list, find the middle node of the list?
+
+	Q4. Merging two linked lists?
+
+Tree : 
+	Q1. Print the values in a tree in an order based on their level. Nodes belonging to the same level should be printed on the same line.
+
+
+
+	Guru Grah Gaye padan raghurai, Alp kal vidya sab aai.

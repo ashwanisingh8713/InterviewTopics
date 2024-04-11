@@ -25,3 +25,89 @@ When moving from Second Activity -> First Activity:
 	second_activity : onStop()
 
 	second_activity : onDestroy()
+
+-------------------------------------------------------
+https://stackoverflow.com/questions/60460066/how-to-launch-an-activity-in-different-task-stack
+
+TastAffinity : The affinity of a task is determined by the affinity of its root activity
+-------------------------------------------------------
+
+Android Launch Mode:
+https://medium.com/android-news/android-activity-launch-mode-e0df1aa72242
+	- Standard
+	- SingleTop
+	- SingleTask
+	- SingleInstance
+-------------------------------------------------------
+
+Fragment Transition (https://stackoverflow.com/questions/18634207/difference-between-add-replace-and-addtobackstack)
+
+Use replace
+
+Go Fragment1
+Fragment1: onAttach
+Fragment1: onCreate
+Fragment1: onCreateView
+Fragment1: onActivityCreated
+Fragment1: onStart
+Fragment1: onResume
+
+Go Fragment2
+Fragment2: onAttach
+Fragment2: onCreate
+Fragment1: onPause
+Fragment1: onStop
+Fragment1: onDestroyView
+Fragment2: onCreateView
+Fragment2: onActivityCreated
+Fragment2: onStart
+Fragment2: onResume
+
+Pop Fragment2
+Fragment2: onPause
+Fragment2: onStop
+Fragment2: onDestroyView
+Fragment2: onDestroy
+Fragment2: onDetach
+Fragment1: onCreateView
+Fragment1: onStart
+Fragment1: onResume
+
+Pop Fragment1
+Fragment1: onPause
+Fragment1: onStop
+Fragment1: onDestroyView
+Fragment1: onDestroy
+Fragment1: onDetach
+
+####### Use add
+
+Go Fragment1
+Fragment1: onAttach
+Fragment1: onCreate
+Fragment1: onCreateView
+Fragment1: onActivityCreated
+Fragment1: onStart
+Fragment1: onResume
+
+Go Fragment2
+Fragment2: onAttach
+Fragment2: onCreate
+Fragment2: onCreateView
+Fragment2: onActivityCreated
+Fragment2: onStart
+Fragment2: onResume
+
+Pop Fragment2
+Fragment2: onPause
+Fragment2: onStop
+Fragment2: onDestroyView
+Fragment2: onDestroy
+Fragment2: onDetach
+
+Pop Fragment1
+Fragment1: onPause
+Fragment1: onStop
+Fragment1: onDestroyView
+Fragment1: onDestroy
+Fragment1: onDetach

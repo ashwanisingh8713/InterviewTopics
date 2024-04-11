@@ -1,0 +1,90 @@
+Advantages of TDD
+	- Great understanding of the product requirements.
+	- Faster Development
+	- Better Design: High Cohesion, Loose Coupling
+	- Less Defects
+	- Promotes Quality Culture
+	- Regression Test Suite
+	- Documentation
+
+TDD is Plateform Independent
+	- This is independent from language and frameworks
+	- Just used libraries are different for example in Java/Kotlin there is Junit Lib and In Dot Net is having Testing Lib
+
+TDD has Development Lifecycle
+	- First Step is Red - First we need to write Unit test that intense to validate our functionality, Initially this test always going to fail as there is no production code to fullfill their funtionality.
+	- Second Step is Green - here we need to write minimum software solution to order to make our test pass, the goal here is not to develop whole feature but just get the test passing, here we should only focus on bit functionality.
+	- Third Step is Blue - Refactor, eliminate code duplication, improvement of test case, inprove the ability of test case
+
+The 3 Rules of TDD (by Uncle Bob Martin)
+	- You may not write production code until you have written a failing unit test.
+	- You may not write mor of unit test than is sufficient to fail, and not compiling is failing.
+	- You may not write more production code than is sufficient to pass the currently failing test.
+
+Test Preconditions
+	- Fast : A test must be fast
+	- Independent: A test must not depend on one and another
+	- Repetable : A test must be repetable, reproducable in main environment
+	- Self-Validating : There should not be ambiguity, whether test will fail or success
+	- Timely : 
+
+Types of Automated Tests
+	- Unit : Tests a very small block of code, usually a method.
+	- Integration : Software modules are combined and tested as a group. this is also called the Instrumentation Test it requires real device or emulator to run.
+	- End to End : Testing an application's workflow from beging to end. This simulates User Experience. It simulates user interaction like button and menu options or UI element. This requires and emulator or real device in order to run.
+
+Google Testing Pyramid
+	- 70% Unit Test (Easy to write, Run fast, Indicate the exact error)
+	- 20% Integration
+	- 10% E2E
+
+Types of TDD
+	- Classisist
+		- State based testing
+		- No use of Mocks
+		- Tests only the end results (state)
+		- Emerging design
+		- Black box testing
+
+	- Outside In
+		- Mock Testing
+		- Vast use of Mocks (Practically in every test, we have one real object instance under test and that collaborative classes or otherwise its dependencies are being mocked)
+		- Testing the Interaction (Besides the Mock testing, we alos test the interaction and result between the classes, we also verify )
+		- Upfront Desing
+		- White box Testing
+
+What problems do Coroutines Solve?
+	- Coroutine manage to handle async code by applying callback logic in a way that is resembles synchronous code.
+	- Long Running Tasks are that take too long to block the main thread.
+	- Main Safety allows you to ensure that any suspend funtion can be called from the main thread.
+
+Suspend and Resume
+	- Suspend
+		- Pauses the execution of the current coroutine, saving all variable.
+		- Let's say that we have a function that is fetching some docs from the backend, And that function is marked 
+			with 'suspend keyword' it is not going to block the main thread for the duration of long running task.
+			when task finishes it starts to consume the main thread resources.
+	- Resume
+		- Continue a suspended coroutine from the place it was paused.
+
+Structured Concurrency 
+	- Structured Concurrency is combination of language features and best practices that, when followed, help you keep track of all work running in coroutines.
+	- In Kotlin, all Coroutine must run in CoroutineScope, CoroutineScope keeps track of Coroutines, even Coroutine that are suspended. It just ensure we don't loose track of Coroutine.
+
+
+Kotlin Flow
+	- It is an implementation of Reactive Stream Specification made on top of Coroutines.
+
+Advantages of Kotlin Flow
+	- Simple API
+	- Structured Concurrency
+	- Backpressure handling
+	- Suspending Execution
+	- Nullability Support
+
+Kotlin Flow In Practice
+	- 
+
+
+
+	- 

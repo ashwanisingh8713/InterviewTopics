@@ -34,7 +34,7 @@ abstract class BaseUseCase<IN, OUT>(private val dispatcher: CoroutineDispatcher)
 }
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 
-Step-2.1, Base Usecase Flow, to achieve abstraction
+Step-3, Base Usecase Flow, to achieve abstraction
 abstract class BaseUseCaseFlow1<IN, OUT> (private val dispatcher: CoroutineDispatcher) where OUT: Any {
 
     abstract suspend fun run (params: IN): Flow<OUT>
@@ -56,7 +56,7 @@ abstract class BaseUseCaseFlow1<IN, OUT> (private val dispatcher: CoroutineDispa
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 
-Step-3.1, ( Repo, Declaration of Actions/UseCases)
+Step-4, ( Repo, Declaration of Actions/UseCases)
 interface IRepository {
     suspend fun addNote(msg: String)
     suspend fun editNote(id: Long, msg: String)
@@ -66,13 +66,13 @@ interface IRepository {
     suspend fun getNoteDetail(params: Any?): Detail
 }
 
-Step-3.2, 
+Step-5, 
 interface IRemoteRepository {
     suspend fun getRemoteNotes(params: Any?):Flow<List<Note>>
     suspend fun getNoteDetail(params: Any?): Detail
 }
 
-Step-3.3, 
+Step-6, 
 interface ICacheRepository {
     suspend fun addNote(msg: String)
     suspend fun editNote(id: Long, msg: String)
@@ -80,7 +80,7 @@ interface ICacheRepository {
     suspend fun delete(id: Long)
 }
 
-Step-3.4,
+Step-7,
 class RepositoryImpl(iCacheRepository: ICacheRepository, iRemoteRepository: IRemoteRepository):IRepository {
     
     @override
@@ -117,7 +117,7 @@ class RepositoryImpl(iCacheRepository: ICacheRepository, iRemoteRepository: IRem
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 Domain
-Step-4.1 (Making "addNote" UseCase )
+Step-8 (Making "addNote" UseCase )
 
 class AddNoteUseCase(iRepository: IRepository, dispatcher: CoroutineDispatcher) : BaseUseCase<Any?, Note>(dispatcher) {
     
@@ -127,7 +127,7 @@ class AddNoteUseCase(iRepository: IRepository, dispatcher: CoroutineDispatcher) 
     }
 }
 
-Step-4.2 (Making "editNote" UseCase )
+Step-9 (Making "editNote" UseCase )
 
 class EditNoteUseCase(iRepository: IRepository, dispatcher: CoroutineDispatcher) : BaseUseCase<Any?, Note>(dispatcher) {
     
@@ -138,7 +138,7 @@ class EditNoteUseCase(iRepository: IRepository, dispatcher: CoroutineDispatcher)
 
 }
 
-Step-4.3 (Making "RemoteNotes" UseCase )
+Step-10 (Making "RemoteNotes" UseCase )
 
 class GetRemoteNotesUseCase(iRepository: IRepository, dispatcher: CoroutineDispatcher) : BaseUseCaseFlow1<Any?, Note>(dispatcher) {
     
@@ -149,7 +149,7 @@ class GetRemoteNotesUseCase(iRepository: IRepository, dispatcher: CoroutineDispa
 
 }
 
-Step-4.4 (Making "deleteNote" UseCase )
+Step-11 (Making "deleteNote" UseCase )
 
 class DeleteNoteUseCase(iRepository: IRepository, dispatcher: CoroutineDispatcher) : BaseUseCase<Any?, Note>(dispatcher) {
     
@@ -160,7 +160,7 @@ class DeleteNoteUseCase(iRepository: IRepository, dispatcher: CoroutineDispatche
     
 }
 
-Step-4.5 (Making "Note Detail", Usecase)
+Step-12 (Making "Note Detail", Usecase)
 class NoteDetailUseCase(iRepository: IRepository, dispatcher: CoroutineDispatcher): BaseUseCase<Any?, Detail>(dispatcher) {
     
     @override
@@ -168,7 +168,7 @@ class NoteDetailUseCase(iRepository: IRepository, dispatcher: CoroutineDispatche
         return iRepository.getNoteDetail(params)
     }
 }
-Step-4.6 (Making "CacheNotes" UseCase )
+Step-13 (Making "CacheNotes" UseCase )
 
 class GetCacheNotesUseCase(iRepository: IRepository, dispatcher: CoroutineDispatcher) : BaseUseCaseFlow1<Any?, Note>(dispatcher) {
     
@@ -181,7 +181,7 @@ class GetCacheNotesUseCase(iRepository: IRepository, dispatcher: CoroutineDispat
 
 Data ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 Data Source Remote (APIs)
-Step-5.1 
+Step-14
 class RemoteRepositoryImpl(apiServices: ApiServices) : IRemoteRepository {
     
     @override
@@ -196,7 +196,7 @@ class RemoteRepositoryImpl(apiServices: ApiServices) : IRemoteRepository {
 
 }
 
-Step-5.2
+Step-15
 class CacheRepositoryImpl(database: Database): ICacheRepository {
     
     @override
@@ -222,7 +222,7 @@ class CacheRepositoryImpl(database: Database): ICacheRepository {
 }
 
 App ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
-Step-6
+Step-16
 
 val apiServices = ApiServices()
 val remoteRepository = RemoteRepositoryImpl(apiServices)

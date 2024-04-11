@@ -7,8 +7,8 @@ MVI is a Reactive Architecture Pattern which is short for Model -View-Intent.
 Model 	 - represents the state of UI. For example UI may have different states like loading, loaded, errors, User button submit state etc.
 
 
-View 	 - In MVI, view is interfaces which is implemented in Activity or Fragment.
-        It means to have container which can accept the different model states and display it as a UI.
+View 	 - It is represented by an interface which defines a set of user actions / intents as Observables.
+           view is a function that takes a new state and defines the display logic inside of it
 
 Intent 	 - The intent simply describes an intention.
 	 - We will be sending models as action to the Intents which can load or show it through Views.
@@ -22,7 +22,14 @@ State	- Data Model Class
 Effect	- UI Changes
 
 
-There’s a lot of separation at every step, and this makes every part extremely easy to test.
+Having this pattern solves a lot of issues we often struggles with in Android Development.
+	- The State Problem
+	- Screen orientation changes
+	- Navigation on the back stack
+	- Process death
+	- Immutability and unidirectional data flow
+	- Debuggable and reproducible states
+	- Testability
 
 
 	

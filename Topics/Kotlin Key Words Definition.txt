@@ -1,0 +1,5 @@
+Channels : (https://medium.com/@mortitech/mastering-kotlin-channels-from-beginner-to-pro-part-1-7368060d1391#:~:text=Kotlin%20Channels%20are%20a%20powerful,without%20interfering%20with%20each%20other)
+
+CompositionLocal : (https://developer.android.com/develop/ui/compose/compositionlocal)
+	- 
+

@@ -1,4 +1,6 @@
 
+https://medium.com/huawei-developers/stateful-android-apps-with-mvi-architecture-model-view-intent-d106b09bd967
+
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 Domain 
 Step-1 (Generic UseCase Response)  - It helps to achieve Abstraction & Interface segregation
@@ -11,7 +13,7 @@ interface UseCaseResponse<out Type> {
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 Domain 
-Step-2 (Base UseCase) - It provides Abstraction and achieves Dependecy Inversion
+Step-2 (Base UseCase) - It provides Abstraction and supports to achieve Dependecy Inversion
 
 abstract class UseCase<in Params, out Type>() where Params: Any, Type: Any {
 
@@ -36,7 +38,7 @@ abstract class UseCase<in Params, out Type>() where Params: Any, Type: Any {
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 Domain 
-Step-3 ( Repo, Declaration of Action / UseCase)
+Step-3 ( Repository declaration of Action / UseCase)
 
 interface LoginRepo {
 	fun login(params: Any?): LoginResponse
@@ -57,7 +59,7 @@ class LoginUseCase(loginRepo: LoginRepo) : UseCase<Any?, LoginResponse>() {
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 Data
-Step-5 (Repository Implementation) - Here ApiSerices is DataSource
+Step-5 (Repository Implementation) - Here Api Services is DataSource
 
 class LoginRepoImpl(dataSource: DataSource): LoginRepo {
 	@override
@@ -99,7 +101,7 @@ class LoginViewModel(loginUseCase: LoginUseCase): ViewModel {
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 App 
-Step-7
+Step-7, Implementation in Presentation layer
 
 val dataSource = DataSource()
 val loginRepo = LoginRepoImpl(dataSource)

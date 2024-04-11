@@ -1,0 +1,126 @@
+
+Android *******************
+	- Android Architecture
+	- App Cold vs Warm vs Hot Start
+	- Base Profile Generator
+	- JetPack APIs category
+	- A
+
+https://developer.android.com/develop/ui/compose/state
+	- Composable States
+		- Stateful Composable : A composable that uses remember to store an object creates internal state, making the composable stateful.
+		- Stateless Composable : A stateless composable is a composable that doesn't hold any state. An easy way to achieve stateless is by using
+
+	https://developer.android.com/develop/ui/compose/state#state-hoisting
+	- State Hoisting : State hoisting in Compose is a pattern of moving state to a composable's caller to make a composable stateless. 
+	- Unidirection : The pattern where the state goes down, and events go up is called a unidirectional data flow.
+
+	https://developer.android.com/develop/ui/compose/state#ways-to-store
+	- Ways to store state
+		- Parcelize
+		- MapSaver
+		- ListSaver
+
+
+	https://developer.android.com/develop/ui/compose/navigation
+	- Navigation
+		- Create a NavController
+		- Create a NavHost
+
+		https://stackoverflow.com/questions/65542751/multiple-arguments-with-jetpack-compose-navigation
+		- Navigate to a composable
+			- Navigate with arguments
+		- NavBackStackEntry
+
+	https://proandroiddev.com/mastering-side-effects-in-jetpack-compose-b7ee46162c01
+	- SideEffects
+	- LaunchEffect vs SideEffect
+
+DI *************************
+	- dagger
+	- difference between bind and provides annotation
+	- Koin
+		- Property (Coponent) access
+		- get() vs by inject
+
+Testing ****************************
+	- unit test using mockito and junit
+
+SDLC **************************
+	- Planing, Defining, Designing, Building, Testing, Deployment
+
+Scrum & Agile Methodoligies ********************
+	- Scrum is an Agile methodology that focuses on delivering business value in a short time.
+	- Agile is a project management approach that involves breaking projects into phases, and emphasizes continuous collaboration and improvement.
+	- Scrum is a practical way to implement Agile.
+	- Scrum emphasizes teamwork in project management, and stresses accountability and iterative progress toward a well-defined goal.
+	- Scrum is broken down into shorter sprints and smaller deliverables. 
+	- While in Agile everything is delivered at the end of the project. Agile involves members from various cross-functional teams, while a Scrum project team includes specific roles, such as the Scrum Master and Product Owner.
+
+
+Design Pattern *****************
+	- MVI Design Pattern 
+	- MVVM Design Pattern
+	- Proxy Design Pattern
+	- Factory Design Pattern
+	- Abstract Factory Design Pattern
+	- Decorator Design Pattern
+	- Facade Design Pattern
+	- Local and Remote Data access repository pattern
+
+OOPs Concepts ************
+
+Solid Principles ************
+
+Language ***************
+	- Kotlin Casting Types
+	- StateFlow vs SharedFlow
+	- Channel
+	- Kotlin Flow : It is an implementation of the Reactive Stream specification made on top of Coroutine.
+	- FlowCallback
+	- Hot Flow vs Cold Flow
+	- Generic Class and Functions and Variances
+	- Scope Functions
+	- Extension Function
+	- Delegate Functions
+	- Extension Lambda Functions
+	- Lambda Function
+	- High Order Function
+	- All Keywords of Kotin
+
+
+	https://stackoverflow.com/questions/44429419/difference-between-fold-and-reduce-in-kotlin-when-to-use-which#:~:text=reduce%20%2D%20The%20reduce()%20method,%2F%2Fsum%20is%206%20now.
+	- reduce() vs fold()
+		- reduce() : The reduce() method transforms a given collection into a single result
+		- fold() : If there’s no right value to return, so reduce() throws a RuntimeException, so fold() is used with default value
+
+
+https://www.baeldung.com/kotlin/io-and-default-dispatcher
+Coroutine *****************
+	- What is Structured Concurrency?
+		- Structured Concurrency is a combination of language features and best practices that, when followed,
+			help you keep track of all work running in coroutines.
+	- Dispatcher
+	- CoroutineScope
+		- Keeps track of Coroutines, even coroutines that are suspended and it can cancel all of the Coroutines started in it.
+	- Coroutinescope vs Superviourscope
+
+UML *****************
+
+
+Data Structure *****************
+	- Stack
+	- Queue
+	- Tree
+	- Linked List : It is a Node which has a value and a pointer of Next Node.
+
+
+
+
+
+
+
+
+
+
+

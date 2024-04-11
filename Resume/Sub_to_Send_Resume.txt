@@ -1,3 +1,4 @@
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 Thank you for reaching out to me, I hope you are doing well.
 
 
@@ -5,8 +6,19 @@ I have been mostly involved in Development, Client interaction and handling, Und
 Delivering and launching the product or feature successfully.
 I embrace the power of Kotlin Multi-Platform.
 
-My Skills : Java, Kotlin, Swift,GoLang, SOLID, Mobile Application Development, KMP, JetPack Libs, ComposeUI, Coroutine, Kotlin Multi Platform, MVVM, MVP, MVI, Team Leading, Jira, Agile Methodology, Flow Charts, CI/CD, Gin-Framework
+My Skills : Java, Kotlin, Swift,GoLang, SOLID, Mobile Application Development, KMP, JetPack Libs, ComposeUI, Coroutine, Kotlin Multi Platform, MVVM, MVI, Team Leading, Agile Methodology, Flow Charts, CI/CD, Gin-Framework
 
 Right now, I am looking for an opportunity where I can broaden my development experience with solving skills and gain better exposure.
 
 For review, I am attaching my latest resume.
+
+
+->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
+I am an autodidact programmer, with a zeal to learn and tinker around with mobile technology.
+
+Adept at leading teams, collaborating with clients, and driving projects from
+concept to completion.
+
+My Skills : Kotlin, Java, Swift, GoLang, SOLID Principles, Clean Arch, Mobile Application Development, KMP, JetPack Libs, ComposeUI, Coroutine, Kotlin Multi Platform, MVVM, MVI, Team Leading, Git, Jira, Agile Methodology, Flow Charts, CI/CD, Unit Test Cases, Gin Framework
+
+Right now, I am looking for an opportunity where I can broaden my development experience with solving skills and gain better exposure.
