@@ -22,7 +22,7 @@ State	- Data Model Class
 Effect	- UI Changes
 
 
-Having this pattern solves a lot of issues we often struggles with in Android Development.
+Having this pattern solves a lot of issues, we often struggles with in Android Development.
 	- The State Problem
 	- Screen orientation changes
 	- Navigation on the back stack

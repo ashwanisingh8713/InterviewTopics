@@ -1,4 +1,6 @@
 
+https://www.hackerrank.com/onboarding?utm_source=hrwCandidateFeedback&redirect=%2Fdomains%2Falgorithms
+
 Android *******************
 	- Android Architecture
 	- App Cold vs Warm vs Hot Start
@@ -6,8 +8,12 @@ Android *******************
 	- JetPack APIs category
 	- A
 
-https://developer.android.com/develop/ui/compose/state
-	- Composable States
+
+Compose *****************
+	- @Stable vs @Immutable
+	- CompositionLocal : https://foso.github.io/Jetpack-Compose-Playground/general/compositionlocal/
+	- Recomposition triggers
+	- Composable States : https://developer.android.com/develop/ui/compose/state
 		- Stateful Composable : A composable that uses remember to store an object creates internal state, making the composable stateful.
 		- Stateless Composable : A stateless composable is a composable that doesn't hold any state. An easy way to achieve stateless is by using
 
@@ -33,8 +39,10 @@ https://developer.android.com/develop/ui/compose/state
 		- NavBackStackEntry
 
 	https://proandroiddev.com/mastering-side-effects-in-jetpack-compose-b7ee46162c01
-	- SideEffects
+	- SideEffects :  A side-effect is a change to the state of the app that happens outside the scope of a composable function.
 	- LaunchEffect vs SideEffect
+	- ConstraintLaayout in Compose : https://blog.stackademic.com/constraint-layout-in-jetpack-compose-f0a620845e01
+	- Compose Stability : https://developer.android.com/develop/ui/compose/performance/stability
 
 DI *************************
 	- dagger
@@ -61,7 +69,7 @@ Scrum & Agile Methodoligies ********************
 Design Pattern *****************
 	- MVI Design Pattern 
 	- MVVM Design Pattern
-	- Proxy Design Pattern
+	- Proxy Design Pattern : https://medium.com/@michalankiersztajn
 	- Factory Design Pattern
 	- Abstract Factory Design Pattern
 	- Decorator Design Pattern
@@ -73,7 +81,7 @@ OOPs Concepts ************
 Solid Principles ************
 
 Language ***************
-	- Kotlin Casting Types
+	- Kotlin Casting Types: (Safe (as?), Unsafe (as), Smart (is))
 	- StateFlow vs SharedFlow
 	- Channel
 	- Kotlin Flow : It is an implementation of the Reactive Stream specification made on top of Coroutine.
@@ -103,7 +111,9 @@ Coroutine *****************
 	- Dispatcher
 	- CoroutineScope
 		- Keeps track of Coroutines, even coroutines that are suspended and it can cancel all of the Coroutines started in it.
+	- Types of CoroutineScope : https://medium.com/@pramahalqavi/several-types-of-kotlin-coroutine-scope-difference-coroutinescope-globalscope-etc-9f086cd40173
 	- Coroutinescope vs Superviourscope
+	- Mutex : https://medium.com/mobile-app-development-publication/mutex-for-coroutines-5f4a4ca60763
 
 UML *****************
 
@@ -113,6 +123,9 @@ Data Structure *****************
 	- Queue
 	- Tree
 	- Linked List : It is a Node which has a value and a pointer of Next Node.
+
+
+
 
 
 

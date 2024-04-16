@@ -85,6 +85,16 @@ Advantages of Kotlin Flow
 Kotlin Flow In Practice
 	- 
 
+Agile Practice
+	- Clear Focus
+		- Work iteratively with the aim to deliver one simple feature at a time.
+	- No Overengineering
+		- Try avoiding guessing what will be useful in future
+	- No Under Engineering
+		- 
+
+
+
 
 
 	- 

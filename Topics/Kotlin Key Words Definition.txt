@@ -2,4 +2,13 @@ Channels : (https://medium.com/@mortitech/mastering-kotlin-channels-from-beginne
 
 CompositionLocal : (https://developer.android.com/develop/ui/compose/compositionlocal)
 	- 
+transient : 
+
+Mutex : 
+
+require : 
+
+
+State Hoist and Unidirectional
+Navigation Host
 

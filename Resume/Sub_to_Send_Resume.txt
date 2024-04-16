@@ -19,6 +19,6 @@ I am an autodidact programmer, with a zeal to learn and tinker around with mobil
 Adept at leading teams, collaborating with clients, and driving projects from
 concept to completion.
 
-My Skills : Kotlin, Java, Swift, GoLang, SOLID Principles, Clean Arch, Mobile Application Development, KMP, JetPack Libs, ComposeUI, Coroutine, Kotlin Multi Platform, MVVM, MVI, Team Leading, Git, Jira, Agile Methodology, Flow Charts, CI/CD, Unit Test Cases, Gin Framework
+My Skills : Kotlin, Java, Swift, GoLang, SOLID Principles, Clean Arch, Mobile Application Development, Kotlin Multiplatform, JetPack Libs, ComposeUI, Coroutine, MVVM, MVI, Team Leading, Git, Jira, Agile Methodology, Flow Charts, CI/CD, Unit Test Cases, Gin Framework
 
 Right now, I am looking for an opportunity where I can broaden my development experience with solving skills and gain better exposure.
