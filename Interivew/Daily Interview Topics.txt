@@ -83,7 +83,7 @@ Solid Principles ************
 Language ***************
 	- Kotlin Casting Types: (Safe (as?), Unsafe (as), Smart (is))
 	- StateFlow vs SharedFlow
-	- Channel
+	- Channel : https://www.baeldung.com/kotlin/channels
 	- Kotlin Flow : It is an implementation of the Reactive Stream specification made on top of Coroutine.
 	- FlowCallback
 	- Hot Flow vs Cold Flow
