@@ -1,0 +1,53 @@
+https://blog.canopas.com/dagger-2-annotation-b3a27d53dabf
+Dependency Injection is a technique where all dependencies are injected to dependent classes.
+
+Advantages of Dependency Injection
+- Maintainability
+- Testability
+- Readability
+- Extensibility
+
+
+@Inject
+    - It tells Dagger that this dependency needed to be transferred to the dependent.
+    - It Can be used in constructor, field or method.
+    - Note that we can’t inject final and static private field as the value of final can never change.
+    - Types:
+        - Constructor injection
+        - Field injection
+        - Method injection
+
+@Module
+    - marks the modules/classes whose methods provide dependencies.
+    - Module provides the instance of dependencies.
+
+@Provides
+    - It tells the dagger how to provide classes that your project does’t own
+    or it tells Dagger how to create instances of the type that this function returns.
+
+@Singleton
+    - It tells Dagger that the instance should be created only once in the application.
+
+@Bind
+    - It is equivalent to @Provides.
+    - It is used to bind the implementation of an interface to a concrete class.
+    - It is mainly used to bind interfaces and abstract classes.
+
+@Component
+    - This annotation tells Dagger what Modules to include when building the graph for providing dependencies.
+    - It is an interface that tells Dagger what to inject and where to inject.
+
+
+@ContributesAndroidInjector
+    - This annotation tells Dagger to generate Subcomponent of activity, fragment, service etc.
+    - @ContributesAndroidInjector is the replacement of old @subComponent
+
+@Scope
+    - You can use @scope annotations, to limit the lifetime of an object to the lifetime of its component.
+
+@Named
+    - The @Named annotation is good for identifying which provider to be used when we are trying
+    to inject the dependency of the same type.
+
+
+
