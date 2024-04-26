@@ -6,7 +6,13 @@ Android *******************
 	- App Cold vs Warm vs Hot Start
 	- Base Profile Generator
 	- JetPack APIs category
-	- A
+	- Proguard
+	- Benchmarking and optimization.
+	- Trace/APM.
+	- SQLite
+	    - Room
+	    - SQLiteOpenHelper
+	    - Entity, DAO, Database, TypeConverter, Migration, Query, DTO
 
 
 Compose *****************
@@ -45,7 +51,13 @@ Compose *****************
 	- Compose Stability : https://developer.android.com/develop/ui/compose/performance/stability
 
 DI *************************
-	- dagger
+Dependency Injection is a technique where all dependencies are injected to dependent classes.
+	- Dagger : Dagger is a fully static, compile-time dependency injection framework for both Java and Android.
+        - Dagger Hilt : Hilt is a dependency injection library for Android that reduces the boilerplate of doing manual dependency injection in your project.
+        - Dagger Android : Dagger Android is a framework that allows you to inject dependencies in Android components like Activities, Fragments, and Services.
+        - https://developer.android.com/training/dependency-injection/hilt-cheatsheet
+        - https://blog.canopas.com/dagger-2-annotation-b3a27d53dabf
+
 	- difference between bind and provides annotation
 	- Koin
 		- Property (Coponent) access
@@ -75,6 +87,8 @@ Design Pattern *****************
 	- Decorator Design Pattern
 	- Facade Design Pattern
 	- Local and Remote Data access repository pattern
+	- Cart & Order Design Pattern
+
 
 OOPs Concepts ************
 
@@ -82,7 +96,8 @@ Solid Principles ************
 
 Language ***************
 	- Kotlin Casting Types: (Safe (as?), Unsafe (as), Smart (is))
-	- StateFlow vs SharedFlow
+	- Flow : https://amitshekhar.me/blog/flow-api-in-kotlin
+	- StateFlow vs SharedFlow : https://amitshekhar.me/blog/stateflow-and-sharedflow
 	- Channel : https://www.baeldung.com/kotlin/channels
 	- Kotlin Flow : It is an implementation of the Reactive Stream specification made on top of Coroutine.
 	- FlowCallback
@@ -95,6 +110,7 @@ Language ***************
 	- Lambda Function
 	- High Order Function
 	- All Keywords of Kotin
+	- Collections Sorting, Comparing and Filtering in Kotlin
 
 
 	https://stackoverflow.com/questions/44429419/difference-between-fold-and-reduce-in-kotlin-when-to-use-which#:~:text=reduce%20%2D%20The%20reduce()%20method,%2F%2Fsum%20is%206%20now.
@@ -116,6 +132,10 @@ Coroutine *****************
 	- Mutex : https://medium.com/mobile-app-development-publication/mutex-for-coroutines-5f4a4ca60763
 
 UML *****************
+
+SQLite Queries ************
+
+
 
 
 Data Structure *****************
