@@ -45,69 +45,69 @@ Fragment Transition (https://stackoverflow.com/questions/18634207/difference-bet
 Use replace
 
 Go Fragment1
-Fragment1: onAttach
-Fragment1: onCreate
-Fragment1: onCreateView
-Fragment1: onActivityCreated
-Fragment1: onStart
-Fragment1: onResume
+    Fragment1: onAttach
+    Fragment1: onCreate
+    Fragment1: onCreateView
+    Fragment1: onActivityCreated
+    Fragment1: onStart
+    Fragment1: onResume
 
 Go Fragment2
-Fragment2: onAttach
-Fragment2: onCreate
-Fragment1: onPause
-Fragment1: onStop
-Fragment1: onDestroyView
-Fragment2: onCreateView
-Fragment2: onActivityCreated
-Fragment2: onStart
-Fragment2: onResume
+    Fragment2: onAttach
+    Fragment2: onCreate
+    Fragment1: onPause
+    Fragment1: onStop
+    Fragment1: onDestroyView
+    Fragment2: onCreateView
+    Fragment2: onActivityCreated
+    Fragment2: onStart
+    Fragment2: onResume
 
 Pop Fragment2
-Fragment2: onPause
-Fragment2: onStop
-Fragment2: onDestroyView
-Fragment2: onDestroy
-Fragment2: onDetach
-Fragment1: onCreateView
-Fragment1: onStart
-Fragment1: onResume
+    Fragment2: onPause
+    Fragment2: onStop
+    Fragment2: onDestroyView
+    Fragment2: onDestroy
+    Fragment2: onDetach
+    Fragment1: onCreateView
+    Fragment1: onStart
+    Fragment1: onResume
 
 Pop Fragment1
-Fragment1: onPause
-Fragment1: onStop
-Fragment1: onDestroyView
-Fragment1: onDestroy
-Fragment1: onDetach
+    Fragment1: onPause
+    Fragment1: onStop
+    Fragment1: onDestroyView
+    Fragment1: onDestroy
+    Fragment1: onDetach
 
 ####### Use add
 
 Go Fragment1
-Fragment1: onAttach
-Fragment1: onCreate
-Fragment1: onCreateView
-Fragment1: onActivityCreated
-Fragment1: onStart
-Fragment1: onResume
+    Fragment1: onAttach
+    Fragment1: onCreate
+    Fragment1: onCreateView
+    Fragment1: onActivityCreated
+    Fragment1: onStart
+    Fragment1: onResume
 
 Go Fragment2
-Fragment2: onAttach
-Fragment2: onCreate
-Fragment2: onCreateView
-Fragment2: onActivityCreated
-Fragment2: onStart
-Fragment2: onResume
+    Fragment2: onAttach
+    Fragment2: onCreate
+    Fragment2: onCreateView
+    Fragment2: onActivityCreated
+    Fragment2: onStart
+    Fragment2: onResume
 
 Pop Fragment2
-Fragment2: onPause
-Fragment2: onStop
-Fragment2: onDestroyView
-Fragment2: onDestroy
-Fragment2: onDetach
+    Fragment2: onPause
+    Fragment2: onStop
+    Fragment2: onDestroyView
+    Fragment2: onDestroy
+    Fragment2: onDetach
 
 Pop Fragment1
-Fragment1: onPause
-Fragment1: onStop
-Fragment1: onDestroyView
-Fragment1: onDestroy
-Fragment1: onDetach
+    Fragment1: onPause
+    Fragment1: onStop
+    Fragment1: onDestroyView
+    Fragment1: onDestroy
+    Fragment1: onDetach

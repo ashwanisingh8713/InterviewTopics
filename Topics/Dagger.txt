@@ -42,7 +42,7 @@ Advantages of Dependency Injection
     - This annotation tells Dagger to generate Subcomponent of activity, fragment, service etc.
     - @ContributesAndroidInjector is the replacement of old @subComponent
 
-@Scope
+@Scope (@Singleton)
     - You can use @scope annotations, to limit the lifetime of an object to the lifetime of its component.
 
 @Named

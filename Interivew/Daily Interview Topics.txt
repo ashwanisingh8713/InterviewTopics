@@ -16,7 +16,7 @@ Android *******************
 
 
 Compose *****************
-	- @Stable vs @Immutable
+	- @Stable vs @Immutable : https://stackoverflow.com/questions/68575936/what-do-the-stable-and-immutable-annotations-mean-in-jetpack-compose
 	- CompositionLocal : https://foso.github.io/Jetpack-Compose-Playground/general/compositionlocal/
 	- Recomposition triggers
 	- Composable States : https://developer.android.com/develop/ui/compose/state
@@ -24,15 +24,24 @@ Compose *****************
 		- Stateless Composable : A stateless composable is a composable that doesn't hold any state. An easy way to achieve stateless is by using
 
 	https://developer.android.com/develop/ui/compose/state#state-hoisting
-	- State Hoisting : State hoisting in Compose is a pattern of moving state to a composable's caller to make a composable stateless. 
+	- State Hoisting : State hoisting in Compose is a pattern of moving state to a composable's caller to make a composable stateless.
+	                The general pattern for state hoisting is to replace the state variable with two parameters:
+	                    - value: T
+	                    - onValueChange: (T) -> Unit
+	- Remember : remember stores objects in the Composition and remember helps you retain state across recompositions.
+    - RememberSavable : It behaves similar to 'remember', because it retains state across recompositions,
+            and also across activity or process recreation using the saved instance state mechanism
+            - Way to store rememberSavable(store state) : https://developer.android.com/develop/ui/compose/state#ways-to-store
+                - Parcelize
+                - MapSaver
+                - ListSaver
+
 	- Unidirection : The pattern where the state goes down, and events go up is called a unidirectional data flow.
 
-	https://developer.android.com/develop/ui/compose/state#ways-to-store
-	- Ways to store state
-		- Parcelize
-		- MapSaver
-		- ListSaver
 
+    UI state : https://developer.android.com/develop/ui/compose/state-hoisting#types-ui-state
+        - Screen UI state : it is what you need to display on the screen.
+        - UI element state : it refers to properties intrinsic to UI elements that influence how they are rendered.
 
 	https://developer.android.com/develop/ui/compose/navigation
 	- Navigation
@@ -74,8 +83,10 @@ Scrum & Agile Methodoligies ********************
 	- Agile is a project management approach that involves breaking projects into phases, and emphasizes continuous collaboration and improvement.
 	- Scrum is a practical way to implement Agile.
 	- Scrum emphasizes teamwork in project management, and stresses accountability and iterative progress toward a well-defined goal.
-	- Scrum is broken down into shorter sprints and smaller deliverables. 
-	- While in Agile everything is delivered at the end of the project. Agile involves members from various cross-functional teams, while a Scrum project team includes specific roles, such as the Scrum Master and Product Owner.
+	- Scrum is broken down into shorter sprints and smaller deliverables.
+	- While in Agile everything is delivered at the end of the project.
+	    Agile involves members from various cross-functional teams,
+	    while a Scrum project team includes specific roles, such as the Scrum Master and Product Owner.
 
 
 Design Pattern *****************
@@ -111,6 +122,7 @@ Language ***************
 	- High Order Function
 	- All Keywords of Kotin
 	- Collections Sorting, Comparing and Filtering in Kotlin
+	- What is plus(+) operator
 
 
 	https://stackoverflow.com/questions/44429419/difference-between-fold-and-reduce-in-kotlin-when-to-use-which#:~:text=reduce%20%2D%20The%20reduce()%20method,%2F%2Fsum%20is%206%20now.
@@ -120,6 +132,8 @@ Language ***************
 
 
 https://www.baeldung.com/kotlin/io-and-default-dispatcher
+https://medium.com/androiddevelopers/coroutines-first-things-first-e6187bf3bb21
+https://canato.medium.com/withcontext-async-or-launch-inside-coroutine-kotlin-17c332854a08
 Coroutine *****************
 	- What is Structured Concurrency?
 		- Structured Concurrency is a combination of language features and best practices that, when followed,
@@ -130,6 +144,8 @@ Coroutine *****************
 	- Types of CoroutineScope : https://medium.com/@pramahalqavi/several-types-of-kotlin-coroutine-scope-difference-coroutinescope-globalscope-etc-9f086cd40173
 	- Coroutinescope vs Superviourscope
 	- Mutex : https://medium.com/mobile-app-development-publication/mutex-for-coroutines-5f4a4ca60763
+	- "launch" and "async" create new coroutines. "withContext" does not create a new coroutine, it only shifts the context of the existing coroutine
+	- val dispatcher = Executors.newFixedThreadPool(2).asCoroutineDispatcher()
 
 UML *****************
 

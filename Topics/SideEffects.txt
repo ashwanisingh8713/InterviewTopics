@@ -6,9 +6,12 @@ https://proandroiddev.com/mastering-side-effects-in-jetpack-compose-b7ee46162c01
 DerivedStateOf			
 	- It is used to derive new state based on the values of other state variables
 DisposableEffect		
-	- effects that require cleanup, For side effects that need to be cleaned up after the keys change or if the composable leaves the Composition, use DisposableEffect. 
+	- effects that require cleanup, For side effects that need to be cleaned up after the keys
+	change or if the composable leaves the Composition, use DisposableEffect.
+	- It clears the effect when the Composable is removed from the screen.
 rememberCoroutineScope	
-	- It is used to create CoroutineScope that is tied to Composable function's lifecycle and It can be used to obtain a composition-aware scope to launch a coroutine outside a composable.
+	- It is used to create CoroutineScope that is tied to Composable function's lifecycle and
+	It can be used to obtain a composition-aware scope to launch a coroutine outside a composable.
 rememberUpdatedState	
 	- reference a value in an effect that shouldn't restart if the value changes
 SideEffect				
@@ -19,7 +22,9 @@ snapshotFlow
 produceState			
 	- convert non-Compose state into Compose state
 LaunchedEffect 			
-	- run suspend functions in the scope of a composable
+	- It is used to launch a coroutine inside the scope of composable function.
+	- LaunchedEffect takes multiple keys as params and if any of the key changes
+	it cancels the existing coroutine and launch again.
 	
 2(DRS) PL
 
