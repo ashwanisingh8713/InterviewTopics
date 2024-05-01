@@ -1,0 +1,27 @@
+Behavioral interview questions
+1. "Can you describe a challenging project you worked on as an Android developer and how you overcame obstacles?"
+2. "How do you prioritize tasks and manage your time effectively when working on multiple projects simultaneously?"
+3. "Tell me about a time when you had to collaborate with other team members to solve a problem or complete a project.
+    How did you contribute to the team's success?"
+4. "Describe a situation where you had to adapt to changes in project requirements or technology.
+    How did you handle it?"
+5. "Can you give an example of a time when you had to troubleshoot and debug a complex issue in an Android application?
+    What was your approach?"
+6. What is technical death?
+
+Managerial interview questions
+1. "How do you approach delegating tasks and responsibilities to members of your team while ensuring project goals are met?"
+2. "Can you describe a situation where you had to resolve conflicts within your team? How did you handle it and what was the outcome?"
+3. "What strategies do you use to motivate and inspire your team members to consistently deliver high-quality work?"
+4. "How do you stay updated with the latest trends and advancements in Android development, and how do you encourage continuous learning within your team?"
+5. "Describe a time when you had to make a tough decision as a team leader or manager. What factors did you consider, and what was the result?"
+
+
+Android GraphQL ->
+
+cvf ->
+
+
+
+
+
