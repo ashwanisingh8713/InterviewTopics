@@ -1,0 +1,47 @@
+https://medium.com/@nirav.tukadiya/mastering-dependency-injection-in-android-using-dagger-hilt-a-complete-tutorial-with-kotlin-6f4d9087ae85
+https://dagger.dev/hilt/view-model
+https://dagger.dev/hilt/components.html#hilt-components
+
+@HiltAndroidApp - This annotation tells Dagger Hilt to generate a base class
+    for your application that provides the dependencies to your Android classes.
+
+@Module - A module is a class that provides the dependencies that is required by app.
+    Actually it creates group of objects.
+    In Module we define method that provides the dependencies.
+
+@AndroidEntryPoint
+    - To inject dependencies into your Android classes, we need to annotate them with @AndroidEntryPoint.
+
+@Inject
+    - It tells Dagger Hilt that this dependency needed to be transferred to the dependent.
+
+@HiltViewModel
+    - A Hilt View Model is a Jetpack ViewModel that is constructor injected by Hilt.
+
+@InstallIn()
+    - To specify that we want to install specific component object which depends on the lifecycle of given Component.
+
+@ApplicationContext
+    - To provide The Application context binding.
+
+Component
+    - Component lifetimes are generally bounded by the creation and destruction of a corresponding instance of an Android class.
+    - There are 8 Components
+        * SingletonComponent
+        * ActivityRetainedComponent
+        * ViewModelComponent
+        * ActivityComponent
+        * FragmentComponent
+        * ViewComponent
+        * ViewWithFragmentComponent
+        * ServiceComponent
+
+Q. Scoped vs unscoped bindings
+Ans. By default, all bindings in Dagger are “unscoped”. This means that each time the binding is requested,
+    Dagger will create a new instance of the binding.
+A scoped binding will only be created once per instance of the component it’s scoped to, and all requests
+    for that binding will share the same instance.
+
+Q. Scoping in modules?
+Ans.
+
