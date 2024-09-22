@@ -1,6 +1,7 @@
 https://medium.com/@nirav.tukadiya/mastering-dependency-injection-in-android-using-dagger-hilt-a-complete-tutorial-with-kotlin-6f4d9087ae85
 https://dagger.dev/hilt/view-model
-https://dagger.dev/hilt/components.html#hilt-components
+
+Dependency Injection is a technique where all dependencies are injected to dependent classes.
 
 @HiltAndroidApp - This annotation tells Dagger Hilt to generate a base class
     for your application that provides the dependencies to your Android classes.
@@ -15,6 +16,12 @@ https://dagger.dev/hilt/components.html#hilt-components
 @Inject
     - It tells Dagger Hilt that this dependency needed to be transferred to the dependent.
 
+@Named("")
+    - To provide multiple instances for same type object with @Named. Pass a unique key to receive the object in the dependent module.
+
+@Volatile
+    - marked objects are stored in the Main Memory to access the updated instances by multiple Clients or Threads.
+
 @HiltViewModel
     - A Hilt View Model is a Jetpack ViewModel that is constructor injected by Hilt.
 
@@ -24,6 +31,7 @@ https://dagger.dev/hilt/components.html#hilt-components
 @ApplicationContext
     - To provide The Application context binding.
 
+https://dagger.dev/hilt/components.html#hilt-components
 Component
     - Component lifetimes are generally bounded by the creation and destruction of a corresponding instance of an Android class.
     - There are 8 Components

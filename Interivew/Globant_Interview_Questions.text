@@ -1,0 +1,44 @@
+Required Technical Skills:
+
+Programming languages :- Java & Kotlin
+
+Persistence:- Shared preferences / Realm database
+Android async process :- Workmanager/ Android services
+
+Multithreading :- RxJava/ Coroutines
+
+Networking :- Retrofit
+
+Android UI :-
+    Custom views
+    Recycler view
+    Coordinator layout
+    Constraint layout
+    Android styles
+    Android dimens
+    Android fragments
+    Activity lifecycle
+    Camera management
+    Compose
+
+Activity Callback Usecases : https://medium.com/@dvrajput96/demystifying-android-activity-lifecycle-ddce0a261b31#:~:text=If%20any%20system%20dialog%20(i.e.,Activity%20A%20to%20Activity%20B.
+
+
+Presentation architecture :- MVP/MVVM
+
+Design patterns :- Decorator/ Builder/Factory/ SOLID principles/ Repository pattern
+
+Repository:- Git / Git flow / Trunk base
+
+CI/CD :- Bitrise/ Fastlane
+
+Android jetpack:-
+    View Model
+    Live Data
+    Compose
+    Navigation
+    Paging
+    Coroutines
+    Flow
+    StateFlow
+    Room

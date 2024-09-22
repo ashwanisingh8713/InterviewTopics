@@ -1,27 +1,123 @@
+https://in.indeed.com/career-advice/interviewing/technical-lead-interview-questions
+
 Behavioral interview questions
-1. "Can you describe a challenging project you worked on as an Android developer and how you overcame obstacles?"
-2. "How do you prioritize tasks and manage your time effectively when working on multiple projects simultaneously?"
-3. "Tell me about a time when you had to collaborate with other team members to solve a problem or complete a project.
-    How did you contribute to the team's success?"
-4. "Describe a situation where you had to adapt to changes in project requirements or technology.
-    How did you handle it?"
-5. "Can you give an example of a time when you had to troubleshoot and debug a complex issue in an Android application?
-    What was your approach?"
-6. What is technical death?
+    1. "Can you describe a challenging project you worked on as an Android developer and how you overcame obstacles?"
+    2. "How do you prioritize tasks and manage your time effectively when working on multiple projects simultaneously?"
+    3. "Tell me about a time when you had to collaborate with other team members to solve a problem or complete a project.
+        How did you contribute to the team's success?"
+    4. "Describe a situation where you had to adapt to changes in project requirements or technology.
+        How did you handle it?"
+    5. "Can you give an example of a time when you had to troubleshoot and debug a complex issue in an Android application?
+        What was your approach?"
+        - Reproducing the Issue:
+              I first tried to reproduce the issue on my own device and emulator but couldn't replicate it.
+              I then collected crash logs from affected users using services like Firebase Crashlytics and analyzed them.
+        - Analyzing Crash Logs:
+              I carefully examined the stack traces to identify any common patterns or exceptions that could lead to the crashes.
+              I looked for any specific device models, OS versions, or user actions that might be triggering the crashes.
+        - Code Review:
+              I reviewed the code related to the reported crashes, focusing on areas that seemed susceptible to issues such as network calls, database operations, or memory management.
+              I also checked for any recent changes in the codebase that could have introduced bugs.
+        - Testing Hypotheses:
+              Based on the analysis, I formulated hypotheses about possible causes of the crashes and tested them one by one.
+              For example, I tested if the issue was related to a specific API response, a particular screen, or a certain user action.
+        - Implementing Fixes:
+            Once I identified the root cause, I implemented the necessary fixes. This could involve code changes, updates to dependencies, or improvements in error handling.
+        - Testing and Validation:
+              After implementing the fixes, I thoroughly tested the app to ensure that the issue was resolved.
+              I also asked some affected users to test the updated version to validate that the crashes were no longer occurring for them.
+        - Monitoring:
+              I continued to monitor the app's performance and crash reports to ensure that the issue did not reappear.
+              I also added additional logging and monitoring to detect similar issues in the future.
+
+    7. Technical debt?
+        - Technical debt is the difference between what was promised and what was actually delivered
+                    in software engineering, including any technical shortcuts made to meet delivery deadlines.
+        - it's the result of prioritizing speedy delivery over perfect code
+        - Hasty or Temporary Solutions
+        - Lack of Documentation
+        - Neglected Refactoring
+        - Poor Design Choices
+
 
 Managerial interview questions
-1. "How do you approach delegating tasks and responsibilities to members of your team while ensuring project goals are met?"
-2. "Can you describe a situation where you had to resolve conflicts within your team? How did you handle it and what was the outcome?"
-3. "What strategies do you use to motivate and inspire your team members to consistently deliver high-quality work?"
-4. "How do you stay updated with the latest trends and advancements in Android development, and how do you encourage continuous learning within your team?"
-5. "Describe a time when you had to make a tough decision as a team leader or manager. What factors did you consider, and what was the result?"
+    1. "How do you approach delegating tasks and responsibilities to members of your team while ensuring project goals are met?"
+    2. "Can you describe a situation where you had to resolve conflicts within your team? How did you handle it and what was the outcome?"
+    3. "What strategies do you use to motivate and inspire your team members to consistently deliver high-quality work?"
+    4. "How do you stay updated with the latest trends and advancements in Android development, and how do you encourage continuous learning within your team?"
+    5. "Describe a time when you had to make a tough decision as a team leader or manager. What factors did you consider, and what was the result?"
 
 
-Android GraphQL ->
+If someone is key player it does not mean he is teamleader.
+I love sharing my knowledge with others, and always willing to learn more as well.
 
-cvf ->
+What are your biggest strengths as a team leader?
+    - Communication
+    - Delegating
+    - Fairness
+    - Innovation
+    - Leadership tactics
+    - Motivational
+    - Planning
+
+What is your leadership style?
+    - collaboration and inspiring others to do their best work.
+    - collaborate with my team members by delegating tasks, leading by example, and making sure they know I care.
+
+What do you find most challenging about being a technical lead?
+    - Decision-making responsibility
+    - Examples, TH & BL merging codebase, modularising the features.
+
+
+What would be your first action as a tech lead at our company?
+    - To deliver successful technical solutions and set an example for the team and take our work towards success
+        and beneficial for the organisation.
+
+Why do you want to work as a tech lead at our company?
+    - I have experience in team handling, communicating and delegating and Decision-making (with evidence and poc)
+        and how they align with the role's responsibilities.
+
+What are your short and long-term goals as a technical lead?
+    - Short term goals : first of all getting a job with your company. Then quickly learning the role, getting to know my team,
+        and becoming a productive and reliable member of the organisation.
+    - Long term goal : Become multi domain architecture within your company.
+
+How do you resolve conflicts between your team members?
+    - https://ca.indeed.com/career-advice/career-development/how-to-resolve-conflict-in-a-team
+    - Identify the conflict
+
+What are your goals as a tech lead?
+    - Code Quality Assurance
+    - Provide Architectural and Design direction
+    - Promote Collaboration and Engagement
+    - Ship Good Quality Code Fast
+    -
+
+Describe a successful project that you completed recently. What was your contribution?
+    I have successfully delivered two application on playstore with 1 crore plus downloads and 4.3 rating.
+    First One is TheHindu Live News Update, seconde one is BusinessLine
+    In this,
+        I had to interact with client for feature requirements, discussion and progress updates.
+        Based on requirements making flow charts and uses cases.
+        Making module and code architecture and design.
+        Doing task breakup, and delegating to team members as per their capabilities.
+        Code review, and guidance to making sure code quality assurance.
+
+        Promoting collaboration and communications.
+        Apart of this massively involvement in development to complete the requirement in fast phase with success in given timeline.
+        Once feature is developed, share the build with Testers using Github actions CI/CD in firebase app distribution.
+        Once quality assurance is done and all bugs are fixed then the share the build with Client.
+
+What strategies do you use to debug a program?
+    - Backtracing
+    - Log analysis
+    - Debug tools
+    - Break points and stepping
 
 
 
+Have you ever dealt with a situation where you reprimanded a team member with poor productivity?
+    -
 
-
+How to handle escalation?
+    - adjust analytics

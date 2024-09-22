@@ -1,0 +1,19 @@
+
+https://blog.nikitaog.me/2014/10/11/android-looper-handler-handlerthread-i/
+
+https://www.linkedin.com/pulse/thread-runnable-handler-looper-appwork-community/
+
+
+Toast can be shown only from UI thread, the correct answer:
+    because it can be shown only from thread with Looper.
+
+What is Looper?
+    - Looper is a worker, that serves a MessageQueue for a current thread.
+    - MessageQueue is a queue that has tasks called messages which should be processed.
+    - Looper is a class which is used to execute the Messages(Runnable/Task) in a queue.
+    - Worker or background threads are not allowed to post any task in Message queue.
+    - Looper have 2 main method Looper.prepare() and Looper.loop().
+
+Where we can use Looper class?
+    - If someone wants to execute multiple messages(Runnables) then he should use the Looper class
+        which is responsible for creating a queue in the thread.

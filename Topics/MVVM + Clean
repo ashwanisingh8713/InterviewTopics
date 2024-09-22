@@ -13,7 +13,7 @@ interface UseCaseResponse<out Type> {
 
 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 Domain 
-Step-2 (Base UseCase) - It provides Abstraction and supports to achieve Dependecy Inversion
+Step-2 (Base UseCase) - It provides Abstraction and supports to achieve Dependency Inversion
 
 abstract class UseCase<in Params, out Type>() where Params: Any, Type: Any {
 

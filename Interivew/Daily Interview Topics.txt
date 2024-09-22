@@ -2,17 +2,39 @@
 https://www.hackerrank.com/onboarding?utm_source=hrwCandidateFeedback&redirect=%2Fdomains%2Falgorithms
 
 Android *******************
+    - Marshalling is the process of converting application data structures into parcels for embedding into Binder transactions.
+    - Unmarshalling is the process of reconstructing the application data structures.
+    - How ViewModel works internally and how it stores viewmodel obj in StoreOwner?
+        : https://write.agrevolution.in/view-model-and-how-it-works-internally-88295e8598ee
 	- Android Architecture
+	- Pagination
 	- App Cold vs Warm vs Hot Start
 	- Base Profile Generator
 	- JetPack APIs category
 	- Proguard
 	- Benchmarking and optimization.
 	- Trace/APM.
+	- LaunchMode : https://medium.com/android-news/android-activity-launch-mode-e0df1aa72242
 	- SQLite
 	    - Room
 	    - SQLiteOpenHelper
 	    - Entity, DAO, Database, TypeConverter, Migration, Query, DTO
+	- Workmanager : https://flexiple.com/android/android-workmanager-tutorial-getting-started
+	    - Immediate : OneTimeWorkRequest and Worker.
+	    - Long Running : WorkRequest or Worker. Call setForeground() in the Worker to handle the notification.
+	    - Deferrable : PeriodicWorkRequest and Worker
+	- Fuse(Filesystem in Userspace) : enables the MediaProvider module to examine file operations in user space
+	        and to gate access to files based on the policy to allow, deny, or redact access.
+	- Scope Storage : scoped storage is to protect the privacy of app and user data.
+	- Doze : Doze reduces battery consumption by deferring background CPU and network activity for apps
+	        when the device is unused for long periods of time.
+	- Standby : when the user doesn't touch the app for a certain period of time,
+	        and any process is not running in foreground either activity or service,
+	        and there is no notification user is seeing on the lock screen or in notification tray.
+    - Test your app with Doze : https://developer.android.com/training/monitoring-device-state/doze-standby#testing_doze
+        - adb shell dumpsys deviceidle force-idle
+    - Test your app with App Standby : https://developer.android.com/training/monitoring-device-state/doze-standby#testing_your_app_with_app_standby
+        - adb shell dumpsys battery unplug
 
 
 Compose *****************
@@ -36,8 +58,9 @@ Compose *****************
                 - MapSaver
                 - ListSaver
 
-	- Unidirection : The pattern where the state goes down, and events go up is called a unidirectional data flow.
-
+	- Unidirection : The pattern where the state goes down,and events go up is called a unidirectional data flow.
+    - Two-way data binding: Two-way data binding is a pattern that allows data to flow in both directions,
+        from the data source to the UI and back again.
 
     UI state : https://developer.android.com/develop/ui/compose/state-hoisting#types-ui-state
         - Screen UI state : it is what you need to display on the screen.
@@ -56,7 +79,7 @@ Compose *****************
 	https://proandroiddev.com/mastering-side-effects-in-jetpack-compose-b7ee46162c01
 	- SideEffects :  A side-effect is a change to the state of the app that happens outside the scope of a composable function.
 	- LaunchEffect vs SideEffect
-	- ConstraintLaayout in Compose : https://blog.stackademic.com/constraint-layout-in-jetpack-compose-f0a620845e01
+	- ConstraintLayout in Compose : https://blog.stackademic.com/constraint-layout-in-jetpack-compose-f0a620845e01
 	- Compose Stability : https://developer.android.com/develop/ui/compose/performance/stability
 
 DI *************************
@@ -110,6 +133,13 @@ Language ***************
 	- Flow : https://amitshekhar.me/blog/flow-api-in-kotlin
 	- StateFlow vs SharedFlow : https://amitshekhar.me/blog/stateflow-and-sharedflow
 	- Channel : https://www.baeldung.com/kotlin/channels
+	    - They allow coroutines to communicate with each other.
+	    - We can combine several producers(SendChannel) and consumers(ReceiveChannel) in a chain to create a pipeline for data processing
+	    - There are four types of Channel:
+	        - Rendezvous Channel - It has no buffer,
+	        - Buffered Channel - We can specify capacity of Buffer in the Channel Constructor. As per capacity it can suspend defined capacity.
+	        - Unlimited Channel - In this we specify 'UNLIMITED' to the Channel Contructor.
+	        - Conflated Channel - In this most recently written value overrides the previously written value. Here receiver part only receives the latest value.
 	- Kotlin Flow : It is an implementation of the Reactive Stream specification made on top of Coroutine.
 	- FlowCallback
 	- Hot Flow vs Cold Flow
@@ -123,6 +153,9 @@ Language ***************
 	- All Keywords of Kotin
 	- Collections Sorting, Comparing and Filtering in Kotlin
 	- What is plus(+) operator
+	- For Loop variants ****
+	- Flow variants ****
+	- What is suspend and how it works?
 
 
 	https://stackoverflow.com/questions/44429419/difference-between-fold-and-reduce-in-kotlin-when-to-use-which#:~:text=reduce%20%2D%20The%20reduce()%20method,%2F%2Fsum%20is%206%20now.
@@ -159,6 +192,18 @@ Data Structure *****************
 	- Queue
 	- Tree
 	- Linked List : It is a Node which has a value and a pointer of Next Node.
+
+Heap vs Stack Memory *************
+    - Heap memory is a type of dynamic memory allocation used for storing objects that require a longer lifespan than stack memory.
+    - Stack memory is a type of static memory allocation used for storing local variables and function call information.
+
+Coroutine vs Thread ***************
+    - Each Thread uses app process resources and it requires their own Stack. and so it is Stackful.
+    - Coroutine uses the same thread and it doesn't require their own Stack.
+    - So Coroutine is lightweight than Thread. and so it is Stackless.
+    - Coroutines are able to suspend and resume their execution without blocking the Thread they are running on.
+
+
 
 
 

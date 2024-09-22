@@ -8,7 +8,7 @@ Model 	 - represents the state of UI. For example UI may have different states l
 
 
 View 	 - It is represented by an interface which defines a set of user actions / intents as Observables.
-           view is a function that takes a new state and defines the display logic inside of it
+           view is a function that takes a new state and defines the display logic inside of it.
 
 Intent 	 - The intent simply describes an intention.
 	 - We will be sending models as action to the Intents which can load or show it through Views.

@@ -9,7 +9,7 @@
 8. How extension function works?
 9. How to create Generic ParameterizedClass?
 10. How to write getter setter.
-11. In ata class field should not be editable from outside.
+11. In data class field should not be editable from outside.
 12. How does Navigation Component & NavigationHost Works? (Link : https://medium.com/@KaushalVasava/navigation-in-jetpack-compose-full-guide-beginner-to-advanced-950c1133740)
 Ans : It has three major parts
 	- NavigationGraph : It keeps all navigation and destination data in one place. This includes all of the locations in the App.

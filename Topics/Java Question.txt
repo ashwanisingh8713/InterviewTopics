@@ -1,0 +1,18 @@
+
+//
+https://medium.com/android-news/9-ways-to-avoid-memory-leaks-in-android-b6d81648e35e
+
+Q.What are memory leaks?
+A.
+- A memory leak happens when memory is allocated but never freed.
+_ Memory of our app will constantly increase until no more memory can be allocated to our app,
+leading to OutOfMemoryError which ultimately crashes the app.
+
+
+Q. what are some of the common mistakes that lead to memory leaks?
+A.
+    - Broadcast Receivers:
+    - Static Activity or View Reference:
+    - Singleton Class Reference: // Use Application context
+    -
+
